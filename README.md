@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Clínica Podológica Gironés - Web
 
-## Getting Started
+Página web profesional para una clínica de podología desarrollada con Next.js 14, Tailwind CSS y Framer Motion.
 
-First, run the development server:
+## 🚀 Tecnologías
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: Next.js 14 (App Router)
+- **Estilos**: Tailwind CSS
+- **Animaciones**: Framer Motion
+- **Formularios**: React Hook Form + Zod
+- **Iconos**: Lucide React
+- **Tipografía**: Inter (Google Fonts)
+
+## 📋 Características
+
+- ✅ Diseño responsive (Mobile-first)
+- ✅ SEO optimizado con Schema.org
+- ✅ Formulario de contacto con validación
+- ✅ Botón flotante de WhatsApp
+- ✅ Click-to-call
+- ✅ Blog integrado
+- ✅ Animaciones sutiles
+- ✅ Accesibilidad WCAG 2.1
+- ✅ Sitemap y robots.txt
+- ✅ Páginas legales
+
+## 🏗️ Estructura del Proyecto
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # Layout principal
+│   ├── page.tsx            # Home
+│   ├── servicios/          # Página de servicios
+│   ├── sobre-nosotros/     # Página sobre nosotros
+│   ├── contacto/           # Página de contacto
+│   ├── blog/               # Blog
+│   │   └── [slug]/         # Artículos individuales
+│   ├── privacidad/         # Política de privacidad
+│   ├── aviso-legal/        # Aviso legal
+│   ├── sitemap.ts          # Sitemap dinámico
+│   └── robots.ts           # Robots.txt
+├── components/
+│   ├── layout/             # Header, Footer, WhatsAppButton
+│   ├── ui/                 # Componentes reutilizables
+│   └── sections/           # Secciones de la home
+├── lib/
+│   ├── constants.ts        # Datos de la clínica
+│   └── utils.ts            # Funciones de utilidad
+└── styles/
+    └── globals.css         # Estilos globales
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Paleta de Colores
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Primary**: `#4A90A4` (azul médico profesional)
+- **Primary Light**: `#E8F4F8`
+- **Primary Dark**: `#2D6A7A`
+- **Neutrales**: Escala de grises
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Instalación
 
-## Learn More
+```bash
+# Instalar dependencias
+pnpm install
 
-To learn more about Next.js, take a look at the following resources:
+# Iniciar servidor de desarrollo
+pnpm dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Construir para producción
+pnpm build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Iniciar servidor de producción
+pnpm start
+```
 
-## Deploy on Vercel
+## 📱 Páginas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Home** (`/`) - Página principal con hero, servicios destacados, testimonios y CTA
+2. **Servicios** (`/servicios`) - Listado completo de los 7 tratamientos
+3. **Sobre Nosotros** (`/sobre-nosotros`) - Historia, equipo y valores
+4. **Contacto** (`/contacto`) - Formulario, mapa y datos de contacto
+5. **Blog** (`/blog`) - Artículos de salud podológica
+6. **Privacidad** (`/privacidad`) - Política de privacidad
+7. **Aviso Legal** (`/aviso-legal`) - Términos legales
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 Personalización
+
+Los datos de la clínica se encuentran en `src/lib/constants.ts`:
+
+- Información de contacto
+- Horarios
+- Servicios
+- Equipo profesional
+- Testimonios
+- Artículos del blog
+
+## 📈 SEO
+
+- Metadata optimizada por página
+- Schema.org para LocalBusiness y MedicalClinic
+- Open Graph y Twitter Cards
+- Sitemap XML dinámico
+- Robots.txt configurado
+
+## 🚀 Despliegue
+
+El proyecto está optimizado para desplegar en:
+
+- **Vercel** (recomendado)
+- **Netlify**
+- Cualquier plataforma compatible con Next.js
+
+```bash
+# Desplegar en Vercel
+pnpm vercel
+
+# O simplemente conectar el repositorio a Vercel
+```
+
+## 📄 Licencia
+
+Proyecto privado - Todos los derechos reservados.
