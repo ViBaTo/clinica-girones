@@ -7,6 +7,7 @@ import {
   Hand, 
   Heart, 
   Dumbbell,
+  Activity,
   Clock,
   CheckCircle,
   ArrowRight
@@ -14,7 +15,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { Button, Card } from "@/components/ui";
-import { SERVICES, CLINIC_INFO } from "@/lib/constants";
+import { SERVICES, SERVICES_DETAIL, CLINIC_INFO } from "@/lib/constants";
 import { generateWhatsAppLink } from "@/lib/utils";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -22,6 +23,7 @@ const iconMap: Record<string, React.ElementType> = {
   Hand,
   Heart,
   Dumbbell,
+  Activity,
 };
 
 const containerVariants = {
@@ -78,8 +80,8 @@ export default function ServiciosPage() {
               Tratamientos especializados para tu bienestar
             </h1>
             <p className="text-lg text-neutral-600 leading-relaxed">
-              Ofrecemos servicios especializados en podología, fisioterapia, suelo pélvico y pilates, 
-              utilizando las técnicas más avanzadas y un enfoque personalizado.
+              Ofrecemos servicios especializados en podología, fisioterapia, suelo pélvico, pilates terapéutico 
+              y ejercicio terapéutico, utilizando las técnicas más avanzadas y un enfoque personalizado.
             </p>
           </motion.div>
         </div>
@@ -131,9 +133,20 @@ export default function ServiciosPage() {
 
                       {/* Content Side */}
                       <div className={`p-8 md:p-12 ${!isEven ? "md:order-1" : ""}`}>
-                        <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900 mb-4">
-                          {service.title}
-                        </h2>
+                        {/* Header with title and details button */}
+                        <div className="flex items-start justify-between gap-4 mb-4">
+                          <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900">
+                            {service.title}
+                          </h2>
+                          {SERVICES_DETAIL[service.id] && (
+                            <Link href={`/servicios/${service.id}`} className="flex-shrink-0">
+                              <Button variant="ghost" size="sm" className="text-primary hover:text-primary-dark gap-1 text-sm">
+                                Ver más
+                                <ArrowRight className="w-3 h-3" />
+                              </Button>
+                            </Link>
+                          )}
+                        </div>
                         <p className="text-neutral-600 leading-relaxed mb-6">
                           {service.fullDescription}
                         </p>
@@ -154,7 +167,7 @@ export default function ServiciosPage() {
                         </div>
 
                         {/* CTA */}
-                        <div className="flex flex-col sm:flex-row gap-3">
+                        <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
                           <Link href="/contacto">
                             <Button className="w-full sm:w-auto gap-2">
                               Pedir cita

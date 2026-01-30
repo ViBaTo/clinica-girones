@@ -4,10 +4,10 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1F2937;
-  --primary: #3C7886;
-  --primary-light: #E1EEF2;
-  --primary-dark: #28525C;
+  --foreground: #1f2937;
+  --primary: #54582f;
+  --primary-light: #dde0c9;
+  --primary-dark: #272b00;
 }
 
 @layer base {
@@ -19,7 +19,12 @@
     @apply text-neutral-800 bg-white antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-semibold text-neutral-900 tracking-tight;
   }
 

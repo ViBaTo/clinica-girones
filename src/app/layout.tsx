@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header, Footer, WhatsAppButton } from "@/components/layout";
+import { InsurancePartners } from "@/components/sections";
 import { SEO_CONFIG, CLINIC_INFO } from "@/lib/constants";
 
 const inter = Inter({
@@ -140,6 +141,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <Header />
         <main>{children}</main>
+        <InsurancePartners />
         <Footer />
         <WhatsAppButton />
       </body>

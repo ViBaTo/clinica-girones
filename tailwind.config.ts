@@ -10,19 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#3C7886",
-          light: "#E1EEF2",
-          dark: "#28525C",
-          50: "#F0F7F9",
-          100: "#E1EEF2",
-          200: "#B8DAE2",
-          300: "#8BC4D0",
-          400: "#5A9DAC",
-          500: "#3C7886",
-          600: "#326571",
-          700: "#28525C",
-          800: "#1E3E47",
-          900: "#152B31",
+          DEFAULT: "#54582f",
+          light: "#dde0c9",
+          dark: "#272b00",
+          50: "#f7f8f2",
+          100: "#eceee3",
+          200: "#dde0c9",
+          300: "#bec092",
+          400: "#86895d",
+          500: "#6a6d46",
+          600: "#54582f",
+          700: "#3e4118",
+          800: "#272b00",
+          900: "#1a1d00",
         },
         neutral: {
           50: "#F8FAFB",
@@ -57,6 +57,7 @@ const config: Config = {
         "fade-in-up": "fadeInUp 0.6s ease-out",
         "slide-in": "slideIn 0.4s ease-out",
         "pulse-soft": "pulseSoft 2s ease-in-out infinite",
+        "marquee": "marquee 30s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -74,6 +75,10 @@ const config: Config = {
         pulseSoft: {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.8" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

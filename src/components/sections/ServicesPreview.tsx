@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Footprints, Hand, Heart, Dumbbell } from "lucide-react";
+import { ArrowRight, Footprints, Hand, Heart, Dumbbell, Activity } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, SectionTitle, Button } from "@/components/ui";
 import { SERVICES } from "@/lib/constants";
 
@@ -11,6 +11,7 @@ const iconMap: Record<string, React.ElementType> = {
   Hand,
   Heart,
   Dumbbell,
+  Activity,
 };
 
 const containerVariants = {
@@ -36,16 +37,13 @@ const itemVariants = {
 };
 
 export function ServicesPreview() {
-  // Show first 4 services
-  const previewServices = SERVICES.slice(0, 4);
-
   return (
     <section id="servicios" className="section-padding bg-white">
       <div className="container-custom">
         <SectionTitle
           subtitle="Nuestros Servicios"
           title="Cuidamos tu bienestar de forma integral"
-          description="Ofrecemos servicios especializados en podología, fisioterapia, suelo pélvico y pilates con las técnicas más avanzadas."
+          description="Ofrecemos servicios especializados en podología, fisioterapia, suelo pélvico, pilates terapéutico y ejercicio terapéutico con las técnicas más avanzadas."
         />
 
         <motion.div
@@ -53,9 +51,9 @@ export function ServicesPreview() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6"
         >
-          {previewServices.map((service) => {
+          {SERVICES.map((service) => {
             const Icon = iconMap[service.icon] || Footprints;
             
             return (
