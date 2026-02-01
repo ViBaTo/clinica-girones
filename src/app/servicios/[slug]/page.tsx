@@ -667,11 +667,10 @@ export default function ServiceDetailPage() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
-              ¿Listo para cuidar tus pies?
+              ¿Listo para seguir cuidándote?
             </h2>
             <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
-              Reserva tu cita y da el primer paso hacia una mejor salud podológica.
-              Nuestro equipo te espera.
+              ¡Reserva tu cita hoy mismo y da el primer paso!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contacto">

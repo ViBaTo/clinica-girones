@@ -1,6 +1,6 @@
-export { Hero } from "./Hero";
-export { ServicesPreview } from "./ServicesPreview";
-export { AboutPreview } from "./AboutPreview";
-export { Testimonials } from "./Testimonials";
-export { ContactCTA } from "./ContactCTA";
-export { InsurancePartners } from "./InsurancePartners";
+export { Hero } from './Hero'
+export { ServicesPreview } from './ServicesPreview'
+export { AboutPreview } from './AboutPreview'
+export { Testimonials } from './Testimonials'
+export { ContactCTA } from './ContactCTA'
+export { InsurancePartners } from './InsurancePartners'

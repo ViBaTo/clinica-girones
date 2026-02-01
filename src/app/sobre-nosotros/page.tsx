@@ -1,35 +1,35 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { 
-  Award, 
-  Users, 
-  Lightbulb, 
+import { motion } from 'framer-motion'
+import {
+  Award,
+  Users,
+  Lightbulb,
   GraduationCap,
   Heart,
   Target,
   Building,
   Calendar
-} from "lucide-react";
-import Link from "next/link";
-import { SectionTitle, Button, Card } from "@/components/ui";
-import { TEAM_MEMBERS, VALUES } from "@/lib/constants";
+} from 'lucide-react'
+import Link from 'next/link'
+import { SectionTitle, Button, Card } from '@/components/ui'
+import { TEAM_MEMBERS, VALUES } from '@/lib/constants'
 
 const iconMap: Record<string, React.ElementType> = {
   Award,
   Users,
-  Lightbulb,
-};
+  Lightbulb
+}
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+      staggerChildren: 0.1
+    }
+  }
+}
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -38,30 +38,30 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut" as const,
-    },
-  },
-};
+      ease: 'easeOut' as const
+    }
+  }
+}
 
 export default function SobreNosotrosPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-20 gradient-primary">
-        <div className="container-custom">
+      <section className='pt-32 pb-16 md:pt-40 md:pb-20 gradient-primary'>
+        <div className='container-custom'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
+            className='max-w-3xl mx-auto text-center'
           >
-            <span className="inline-block text-primary font-medium text-sm uppercase tracking-wider mb-4">
+            <span className='inline-block text-primary font-medium text-sm uppercase tracking-wider mb-4'>
               Sobre Nosotros
             </span>
-            <h1 className="text-4xl md:text-5xl font-semibold text-neutral-900 mb-6">
+            <h1 className='text-4xl md:text-5xl font-semibold text-neutral-900 mb-6'>
               Conoce a nuestro equipo
             </h1>
-            <p className="text-lg text-neutral-600 leading-relaxed">
+            <p className='text-lg text-neutral-600 leading-relaxed'>
               Profesionales comprometidos con la salud de tus pies desde 2008.
             </p>
           </motion.div>
@@ -69,25 +69,25 @@ export default function SobreNosotrosPage() {
       </section>
 
       {/* Historia Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <section className='section-padding bg-white'>
+        <div className='container-custom'>
+          <div className='grid lg:grid-cols-2 gap-12 lg:gap-20 items-center'>
             {/* Image Side */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="relative"
+              className='relative'
             >
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-primary-200">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="w-24 h-24 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <Building className="w-12 h-12 text-primary" />
+              <div className='relative aspect-[4/3] rounded-2xl overflow-hidden'>
+                <div className='absolute inset-0 bg-gradient-to-br from-primary-100 to-primary-200'>
+                  <div className='absolute inset-0 flex items-center justify-center'>
+                    <div className='text-center p-8'>
+                      <div className='w-24 h-24 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center'>
+                        <Building className='w-12 h-12 text-primary' />
                       </div>
-                      <p className="text-primary-dark font-medium">
+                      <p className='text-primary-dark font-medium'>
                         Nuestra clínica
                       </p>
                     </div>
@@ -101,15 +101,15 @@ export default function SobreNosotrosPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-5 shadow-elevated"
+                className='absolute -bottom-6 -right-6 bg-white rounded-2xl p-5 shadow-elevated'
               >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center">
-                    <Calendar className="w-6 h-6 text-primary" />
+                <div className='flex items-center gap-4'>
+                  <div className='w-12 h-12 bg-primary-light rounded-xl flex items-center justify-center'>
+                    <Calendar className='w-6 h-6 text-primary' />
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-neutral-900">2008</p>
-                    <p className="text-sm text-neutral-500">Año de fundación</p>
+                    <p className='text-2xl font-bold text-neutral-900'>2008</p>
+                    <p className='text-sm text-neutral-500'>Año de fundación</p>
                   </div>
                 </div>
               </motion.div>
@@ -122,45 +122,45 @@ export default function SobreNosotrosPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block text-primary font-medium text-sm uppercase tracking-wider mb-3">
+              <span className='inline-block text-primary font-medium text-sm uppercase tracking-wider mb-3'>
                 Nuestra Historia
               </span>
-              <h2 className="text-3xl md:text-4xl font-semibold text-neutral-900 mb-6">
+              <h2 className='text-3xl md:text-4xl font-semibold text-neutral-900 mb-6'>
                 Más de 15 años cuidando de tus pies
               </h2>
-              <div className="space-y-4 text-neutral-600 leading-relaxed">
+              <div className='space-y-4 text-neutral-600 leading-relaxed'>
                 <p>
-                  Clínica Podológica Gironés nació en 2008 con una visión clara: ofrecer 
-                  tratamientos podológicos de la más alta calidad con un trato cercano y 
-                  personalizado.
+                  Clínica Gironés nació en 2008 con una visión clara: ofrecer
+                  tratamientos podológicos de la más alta calidad con un trato
+                  cercano y personalizado.
                 </p>
                 <p>
-                  Fundada por el Dr. Ernesto García López, nuestra clínica ha crecido 
-                  hasta convertirse en un referente en Madrid, atendiendo a más de 5.000 
-                  pacientes y siendo colaboradores habituales de equipos deportivos 
-                  profesionales.
+                  Fundada por el Dr. Ernesto García López, nuestra clínica ha
+                  crecido hasta convertirse en un referente en Madrid,
+                  atendiendo a más de 5.000 pacientes y siendo colaboradores
+                  habituales de equipos deportivos profesionales.
                 </p>
                 <p>
-                  A lo largo de estos años, hemos incorporado las técnicas más avanzadas 
-                  y la tecnología más moderna, sin perder nunca de vista lo más importante: 
-                  el bienestar de nuestros pacientes.
+                  A lo largo de estos años, hemos incorporado las técnicas más
+                  avanzadas y la tecnología más moderna, sin perder nunca de
+                  vista lo más importante: el bienestar de nuestros pacientes.
                 </p>
               </div>
 
               {/* Stats */}
-              <div className="mt-8 pt-8 border-t border-neutral-200">
-                <div className="grid grid-cols-3 gap-6">
+              <div className='mt-8 pt-8 border-t border-neutral-200'>
+                <div className='grid grid-cols-3 gap-6'>
                   <div>
-                    <p className="text-3xl font-bold text-primary">+5.000</p>
-                    <p className="text-sm text-neutral-500">Pacientes</p>
+                    <p className='text-3xl font-bold text-primary'>+5.000</p>
+                    <p className='text-sm text-neutral-500'>Pacientes</p>
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-primary">+15</p>
-                    <p className="text-sm text-neutral-500">Años</p>
+                    <p className='text-3xl font-bold text-primary'>+15</p>
+                    <p className='text-sm text-neutral-500'>Años</p>
                   </div>
                   <div>
-                    <p className="text-3xl font-bold text-primary">3</p>
-                    <p className="text-sm text-neutral-500">Especialistas</p>
+                    <p className='text-3xl font-bold text-primary'>3</p>
+                    <p className='text-sm text-neutral-500'>Especialistas</p>
                   </div>
                 </div>
               </div>
@@ -170,45 +170,52 @@ export default function SobreNosotrosPage() {
       </section>
 
       {/* Equipo Section */}
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom">
+      <section className='section-padding bg-neutral-50'>
+        <div className='container-custom'>
           <SectionTitle
-            subtitle="Nuestro Equipo"
-            title="Profesionales a tu servicio"
-            description="Un equipo de podólogos especializados comprometidos con tu salud."
+            subtitle='Nuestro Equipo'
+            title='Profesionales a tu servicio'
+            description='Un equipo de podólogos especializados comprometidos con tu salud.'
           />
 
           <motion.div
             variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial='hidden'
+            whileInView='visible'
             viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
+            className='grid md:grid-cols-3 gap-8'
           >
             {TEAM_MEMBERS.map((member) => (
               <motion.div key={member.name} variants={itemVariants}>
-                <Card className="h-full text-center p-8">
+                <Card className='h-full text-center p-8'>
                   {/* Avatar */}
-                  <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                    <span className="text-4xl font-semibold text-primary">
-                      {member.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
+                  <div className='w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center'>
+                    <span className='text-4xl font-semibold text-primary'>
+                      {member.name
+                        .split(' ')
+                        .map((n) => n[0])
+                        .join('')
+                        .slice(0, 2)}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-1">
+                  <h3 className='text-xl font-semibold text-neutral-900 mb-1'>
                     {member.name}
                   </h3>
-                  <p className="text-primary font-medium mb-4">{member.role}</p>
-                  <p className="text-neutral-600 text-sm leading-relaxed mb-6">
+                  <p className='text-primary font-medium mb-4'>{member.role}</p>
+                  <p className='text-neutral-600 text-sm leading-relaxed mb-6'>
                     {member.bio}
                   </p>
 
                   {/* Credentials */}
-                  <div className="pt-6 border-t border-neutral-100">
-                    <ul className="space-y-2">
+                  <div className='pt-6 border-t border-neutral-100'>
+                    <ul className='space-y-2'>
                       {member.credentials.map((credential, i) => (
-                        <li key={i} className="flex items-center justify-center gap-2 text-xs text-neutral-500">
-                          <GraduationCap className="w-3.5 h-3.5 text-primary" />
+                        <li
+                          key={i}
+                          className='flex items-center justify-center gap-2 text-xs text-neutral-500'
+                        >
+                          <GraduationCap className='w-3.5 h-3.5 text-primary' />
                           {credential}
                         </li>
                       ))}
@@ -222,72 +229,90 @@ export default function SobreNosotrosPage() {
       </section>
 
       {/* Valores Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
+      <section className='section-padding bg-white'>
+        <div className='container-custom'>
           <SectionTitle
-            subtitle="Nuestros Valores"
-            title="Lo que nos define"
-            description="Los pilares sobre los que construimos nuestra práctica profesional."
+            subtitle='Nuestros Valores'
+            title='Lo que nos define'
+            description='Los pilares sobre los que construimos nuestra práctica profesional.'
           />
 
           <motion.div
             variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial='hidden'
+            whileInView='visible'
             viewport={{ once: true }}
-            className="grid md:grid-cols-3 gap-8"
+            className='grid md:grid-cols-3 gap-8'
           >
             {VALUES.map((value) => {
-              const Icon = iconMap[value.icon] || Award;
+              const Icon = iconMap[value.icon] || Award
               return (
                 <motion.div key={value.title} variants={itemVariants}>
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-primary-light rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                      <Icon className="w-10 h-10 text-primary" />
+                  <div className='text-center'>
+                    <div className='w-20 h-20 bg-primary-light rounded-2xl mx-auto mb-6 flex items-center justify-center'>
+                      <Icon className='w-10 h-10 text-primary' />
                     </div>
-                    <h3 className="text-xl font-semibold text-neutral-900 mb-3">
+                    <h3 className='text-xl font-semibold text-neutral-900 mb-3'>
                       {value.title}
                     </h3>
-                    <p className="text-neutral-600 leading-relaxed">
+                    <p className='text-neutral-600 leading-relaxed'>
                       {value.description}
                     </p>
                   </div>
                 </motion.div>
-              );
+              )
             })}
           </motion.div>
         </div>
       </section>
 
       {/* Instalaciones Section */}
-      <section className="section-padding bg-neutral-50">
-        <div className="container-custom">
+      <section className='section-padding bg-neutral-50'>
+        <div className='container-custom'>
           <SectionTitle
-            subtitle="Instalaciones"
-            title="Equipamiento de última generación"
-            description="Contamos con las instalaciones y tecnología más avanzada para ofrecerte el mejor servicio."
+            subtitle='Instalaciones'
+            title='Equipamiento de última generación'
+            description='Contamos con las instalaciones y tecnología más avanzada para ofrecerte el mejor servicio.'
           />
 
           <motion.div
             variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
+            initial='hidden'
+            whileInView='visible'
             viewport={{ once: true }}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6'
           >
             {[
-              { icon: Target, title: "Plataforma de presiones", desc: "Análisis biomecánico preciso" },
-              { icon: Heart, title: "Equipamiento estéril", desc: "Máxima higiene y seguridad" },
-              { icon: Lightbulb, title: "Láser podológico", desc: "Tratamientos avanzados" },
-              { icon: Users, title: "Sala de espera", desc: "Ambiente cómodo y acogedor" },
+              {
+                icon: Target,
+                title: 'Plataforma de presiones',
+                desc: 'Análisis biomecánico preciso'
+              },
+              {
+                icon: Heart,
+                title: 'Equipamiento estéril',
+                desc: 'Máxima higiene y seguridad'
+              },
+              {
+                icon: Lightbulb,
+                title: 'Láser podológico',
+                desc: 'Tratamientos avanzados'
+              },
+              {
+                icon: Users,
+                title: 'Sala de espera',
+                desc: 'Ambiente cómodo y acogedor'
+              }
             ].map((item) => (
               <motion.div key={item.title} variants={itemVariants}>
-                <Card hover className="h-full text-center py-8">
-                  <div className="w-14 h-14 bg-primary-light rounded-xl mx-auto mb-4 flex items-center justify-center">
-                    <item.icon className="w-7 h-7 text-primary" />
+                <Card hover className='h-full text-center py-8'>
+                  <div className='w-14 h-14 bg-primary-light rounded-xl mx-auto mb-4 flex items-center justify-center'>
+                    <item.icon className='w-7 h-7 text-primary' />
                   </div>
-                  <h3 className="font-semibold text-neutral-900 mb-2">{item.title}</h3>
-                  <p className="text-sm text-neutral-600">{item.desc}</p>
+                  <h3 className='font-semibold text-neutral-900 mb-2'>
+                    {item.title}
+                  </h3>
+                  <p className='text-sm text-neutral-600'>{item.desc}</p>
                 </Card>
               </motion.div>
             ))}
@@ -296,25 +321,26 @@ export default function SobreNosotrosPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary">
-        <div className="container-custom text-center">
+      <section className='section-padding bg-primary'>
+        <div className='container-custom text-center'>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+            <h2 className='text-3xl md:text-4xl font-semibold text-white mb-4'>
               ¿Quieres conocernos en persona?
             </h2>
-            <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
-              Visita nuestra clínica y descubre por qué somos la elección de miles de pacientes.
+            <p className='text-primary-100 text-lg mb-8 max-w-2xl mx-auto'>
+              Visita nuestra clínica y descubre por qué somos la elección de
+              miles de pacientes.
             </p>
-            <Link href="/contacto">
+            <Link href='/contacto'>
               <Button
-                variant="secondary"
-                size="lg"
-                className="bg-white text-primary hover:bg-neutral-50"
+                variant='secondary'
+                size='lg'
+                className='bg-white text-primary hover:bg-neutral-50'
               >
                 Pide tu primera cita
               </Button>
@@ -323,5 +349,5 @@ export default function SobreNosotrosPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

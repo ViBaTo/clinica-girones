@@ -5,7 +5,6 @@ import {
   MapPin, 
   Clock, 
   Instagram, 
-  Facebook,
   ArrowRight
 } from "lucide-react";
 import { CLINIC_INFO, NAV_LINKS, SERVICES } from "@/lib/constants";
@@ -16,7 +15,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-neutral-900 text-white">
+    <footer className="bg-black text-white">
       {/* CTA Section */}
       <div className="bg-primary">
         <div className="container-custom py-12 md:py-16">
@@ -71,15 +70,6 @@ export function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="w-5 h-5" />
-              </a>
-              <a
-                href={CLINIC_INFO.socialMedia.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center text-neutral-400 hover:bg-primary hover:text-white transition-all"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </div>

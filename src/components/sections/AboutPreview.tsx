@@ -49,7 +49,7 @@ export function AboutPreview() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className='absolute -bottom-6 -right-6 bg-primary text-white rounded-2xl p-6 shadow-elevated'
             >
-              <p className='text-4xl font-bold'>+30</p>
+              <p className='text-4xl font-bold text-white'>+30</p>
               <p className='text-primary-100 text-sm'>años de experiencia</p>
             </motion.div>
           </motion.div>
@@ -68,9 +68,9 @@ export function AboutPreview() {
               Tu salud en las mejores manos
             </h2>
             <p className='text-neutral-600 text-lg leading-relaxed mb-8'>
-              En Clínica Podológica Gironés con las técnicas más avanzadas para
-              ofrecer un cuidado integral de tu cuerpo, nuestro equipo de
-              profesionales está comprometido con tu bienestar.
+              En Clínica Gironés con las técnicas más avanzadas para ofrecer un
+              cuidado integral de tu cuerpo, nuestro equipo de profesionales
+              está comprometido con tu bienestar.
             </p>
 
             {/* Values */}

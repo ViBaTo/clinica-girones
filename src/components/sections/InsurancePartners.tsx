@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const INSURANCE_LOGOS = [
-  { name: "Adeslas", src: "/aseguradoras/adeslas_vector (1).svg" },
+  { name: "Adeslas", src: "/aseguradoras/adeslas-logo.svg" },
   { name: "Sanitas", src: "/aseguradoras/Sanitas-Logo.svg" },
   { name: "Asisa", src: "/aseguradoras/Asisa-Logo.svg" },
   { name: "Muface", src: "/aseguradoras/Muface-logo.svg" },

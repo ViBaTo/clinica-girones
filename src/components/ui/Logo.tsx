@@ -1,32 +1,32 @@
-import Image from "next/image";
-import { cn } from "@/lib/utils";
+import Image from 'next/image'
+import { cn } from '@/lib/utils'
 
 interface LogoProps {
-  className?: string;
-  size?: "sm" | "md" | "lg";
+  className?: string
+  size?: 'sm' | 'md' | 'lg'
 }
 
-export function Logo({ className, size = "md" }: LogoProps) {
+export function Logo({ className, size = 'md' }: LogoProps) {
   const sizes = {
-    sm: { height: 40, width: 56 },
-    md: { height: 56, width: 79 },
-    lg: { height: 80, width: 113 },
-  };
+    sm: { height: 64, width: 90 },
+    md: { height: 88, width: 124 },
+    lg: { height: 112, width: 158 }
+  }
 
   const sizeClasses = {
-    sm: "h-10",
-    md: "h-14",
-    lg: "h-20",
-  };
+    sm: 'h-16',
+    md: 'h-[88px]',
+    lg: 'h-28'
+  }
 
   return (
     <Image
-      src="/clinica-girones-logo.svg"
-      alt="Clínica Gironés"
+      src='/clinica-girones-logo.svg'
+      alt='Clínica Gironés'
       width={sizes[size].width}
       height={sizes[size].height}
-      className={cn(sizeClasses[size], "w-auto", className)}
+      className={cn(sizeClasses[size], 'w-auto', className)}
       priority
     />
-  );
+  )
 }

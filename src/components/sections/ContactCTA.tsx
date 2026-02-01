@@ -34,11 +34,10 @@ export function ContactCTA() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
-                  ¿Listo para cuidar de tus pies?
+                  ¿Listo para seguir cuidándote?
                 </h2>
                 <p className="text-primary-100 text-lg mb-8 leading-relaxed">
-                  Reserva tu cita hoy mismo y da el primer paso hacia unos pies sanos. 
-                  Nuestro equipo de profesionales está aquí para ayudarte.
+                  ¡Reserva tu cita hoy mismo y da el primer paso!
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">

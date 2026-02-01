@@ -146,14 +146,15 @@ export function Testimonials() {
           ))}
         </div>
 
-        {/* Google Rating Badge */}
+        {/* Rating Badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className='mt-12 text-center'
+          className='mt-12 flex flex-col sm:flex-row items-center justify-center gap-4'
         >
+          {/* Google Rating */}
           <div className='inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-soft'>
             <div className='flex gap-0.5'>
               {[...Array(5)].map((_, i) => (
@@ -164,10 +165,26 @@ export function Testimonials() {
               ))}
             </div>
             <span className='text-sm text-neutral-600'>
-              <span className='font-semibold text-neutral-900'>4.9</span> en
+              <span className='font-semibold text-neutral-900'>4.8</span> en
               Google
               <span className='text-neutral-400 mx-2'>•</span>
-              +150 reseñas
+              89 reseñas
+            </span>
+          </div>
+
+          {/* Doctoralia Rating */}
+          <div className='inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-soft'>
+            <div className='flex gap-0.5'>
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className='w-4 h-4 fill-yellow-400 text-yellow-400'
+                />
+              ))}
+            </div>
+            <span className='text-sm text-neutral-600'>
+              <span className='font-semibold text-neutral-900'>5/5</span> en
+              Doctoralia
             </span>
           </div>
         </motion.div>

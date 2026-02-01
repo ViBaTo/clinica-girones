@@ -3,10 +3,10 @@ export const CLINIC_INFO = {
   name: 'Clínica Podológica Gironés',
   slogan: 'Cuidamos tus pies, mejoramos tu vida',
   description:
-    'Clínica de podología especializada en el cuidado integral del pie. Más de 15 años de experiencia ofreciendo tratamientos personalizados con la última tecnología.',
-  phone: '+34 610 828 085',
-  whatsapp: '+34 610 828 085',
-  email: 'info@clinicagirones.es',
+    'Clínica especializada en el cuidado integral de tu salud, con más de 30 años de experiencia ofreciendo tratamientos personalizados con la última tecnología.',
+  phone: '+34 963 601 380',
+  whatsapp: '+34 657 982 445',
+  email: 'recepcion@clinicagirones.es',
   address: {
     street: "Carrer d'Armando Palacio Valdés, 11",
     neighborhood: 'El Pla del Real',
@@ -15,13 +15,11 @@ export const CLINIC_INFO = {
     country: 'España'
   },
   hours: [
-    { days: 'Lunes - Viernes', hours: '9:00 - 20:00' },
-    { days: 'Sábados', hours: '10:00 - 14:00' },
-    { days: 'Domingos', hours: 'Cerrado' }
+    { days: 'Lunes - Jueves', hours: '9:00 - 13:30 / 16:00 - 20:00' },
+    { days: 'Viernes', hours: '9:00 - 13:30' }
   ],
   socialMedia: {
-    instagram: 'https://instagram.com/clinicagirones',
-    facebook: 'https://facebook.com/clinicagirones'
+    instagram: 'https://www.instagram.com/clinicagirones/'
   },
   mapEmbedUrl:
     "https://www.google.com/maps?q=Carrer+d'Armando+Palacio+Valdés,+11,+46010+València,+Spain&output=embed"
@@ -1296,84 +1294,76 @@ export const VALUES = [
 // Testimonios de pacientes
 export const TESTIMONIALS = [
   {
-    name: 'Ana García',
-    role: 'Paciente desde 2019',
+    name: 'Mari Mar Rosado',
+    role: 'Paciente',
     content:
-      'Después de años con problemas en los pies, encontré en esta clínica la solución definitiva. El Dr. Ernesto me hizo unas plantillas que cambiaron mi vida. Ahora puedo caminar sin dolor.',
+      'Mi hijo acudió para eliminar una verruga plantar que llevaba arrastrando varios años y varios podólogos y siempre volvía a aparecer. Por fin le han dado el alta. Tras varios meses de tratamiento está eliminada y ha quedado encantado con el trato recibido y el interés mostrado en todo momento por las doctoras. Sin duda volverá si vuelve a necesitar algún servicio.',
     rating: 5,
-    image: '/images/testimonials/ana.jpg'
+    image: '/images/testimonials/marimar.jpg'
   },
   {
-    name: 'Miguel Fernández',
-    role: 'Deportista amateur',
+    name: 'Carolina Llobet Roig',
+    role: 'Paciente',
     content:
-      'Como corredor, el estudio biomecánico fue revelador. Descubrieron la causa de mis lesiones recurrentes y con las plantillas deportivas he mejorado mis tiempos y dejado atrás las molestias.',
+      'Encantadísima con el trato. Llevaba mucho tiempo con una tendinitis de los peroneos, fui a esta clínica gracias a una amiga que me la recomendó y no puedo estar más agradecida. Desde el momento en que llegué, el ambiente fue muy profesional y acogedor. Me realizó unas plantillas hechas a medida después de los resultados del estudio de la pisada que me hizo detalladamente y la mejoría fue alucinante.',
     rating: 5,
-    image: '/images/testimonials/miguel.jpg'
+    image: '/images/testimonials/carolina.jpg'
   },
   {
-    name: 'Carmen López',
-    role: 'Paciente diabética',
+    name: 'Ian',
+    role: 'Paciente',
     content:
-      'El seguimiento que hacen del pie diabético es excepcional. Me siento muy cuidada y tranquila sabiendo que están pendientes de cualquier cambio. Muy profesionales y humanos.',
+      'Estoy muy contento con el trato recibido por todo el equipo de esta clínica. Me han cambiado totalmente la vida al tratarme varios problemas en el pie. Profesionales, atentas, siempre explicándome con todo detalle el tratamiento. Han solucionado mi problema y el dolor agudo que tenía al caminar. Muchas gracias a este equipo. Añadir que las instalaciones son maravillosas.',
     rating: 5,
-    image: '/images/testimonials/carmen.jpg'
+    image: '/images/testimonials/ian.jpg'
   },
   {
-    name: 'Javier Martínez',
-    role: 'Paciente desde 2021',
+    name: 'Almudena Ortega Ramírez',
+    role: 'Paciente',
     content:
-      'Llevaba meses con dolor en el talón que no se iba. Después del diagnóstico y tratamiento aquí, en pocas semanas estaba completamente recuperado. Excelente atención y seguimiento.',
+      'Acudí a esta clínica por recomendación y estoy encantada. La fisioterapeuta Alba es, además de una profesional, un encanto. Supo detectar el problema que tenía desde el primer momento y tratarlo rápidamente. Quedé encantada con el trato y volví para probar con las podólogas: otro 10. Recomiendo esta clínica a todo el mundo, tanto por la profesionalidad como por el trato, inmejorable!',
     rating: 5,
-    image: '/images/testimonials/javier.jpg'
+    image: '/images/testimonials/almudena.jpg'
   },
   {
-    name: 'Laura Sánchez',
-    role: 'Paciente de fisioterapia',
+    name: 'Iñaki Huelamo',
+    role: 'Paciente',
     content:
-      'La rehabilitación de mi lesión de tobillo fue muy profesional. Me explicaron todo el proceso y los ejercicios para hacer en casa. Recuperé la movilidad antes de lo esperado.',
+      'Clínica muy recomendable. Las instalaciones muy nuevas. El personal profesional y atento tanto Alba como Pilar. Para un tema tan delicado como los pies hay que ponerse en buenas manos y aquí lo estoy.',
     rating: 5,
-    image: '/images/testimonials/laura.jpg'
+    image: '/images/testimonials/inaki.jpg'
   },
   {
-    name: 'Roberto Navarro',
-    role: 'Triatleta',
+    name: 'Federico Martín Sancho',
+    role: 'Deportista',
     content:
-      'Como deportista de larga distancia, necesitaba unas plantillas específicas. El estudio que me hicieron fue muy completo y el resultado ha sido increíble. Cero molestias en competición.',
+      'Llevaba arrastrando meses una fascitis plantar que me impedía correr. Por la recomendación de unos amigos acudí a ésta clínica. Me hicieron un estudio biomecánico completo para hacerme plantillas, a la vez que me dieron sesiones de rehabilitación y un seguimiento completo y personalizado. A día de hoy, ha desaparecido completamente mi dolor y estoy corriendo con normalidad. Las plantillas las hacen con una nueva técnica en impresión 3D… realmente asombrado con el resultado.',
     rating: 5,
-    image: '/images/testimonials/roberto.jpg'
+    image: '/images/testimonials/federico.jpg'
   },
   {
-    name: 'Elena Ruiz',
-    role: 'Paciente de suelo pélvico',
+    name: 'Héctor Quiles Bou',
+    role: 'Paciente',
     content:
-      'Después del embarazo tenía problemas que creía normales. Gracias al tratamiento de suelo pélvico he recuperado mi calidad de vida. Un equipo muy profesional y discreto.',
+      'Me desplazo hasta esta clínica a propósito desde donde vivo (87km de distancia). Muy profesionales y con un trato genial al cliente, desde la recepcionista hasta las doctoras. Además muy estrictas y cuidadosas con las medidas de seguridad, lo cual se agradece mucho.',
     rating: 5,
-    image: '/images/testimonials/elena.jpg'
+    image: '/images/testimonials/hector.jpg'
   },
   {
-    name: 'Francisco Gil',
-    role: 'Paciente desde 2018',
+    name: 'Judith Pérez',
+    role: 'Paciente',
     content:
-      'Mis uñas encarnadas eran un problema recurrente. Aquí me dieron una solución definitiva con un tratamiento que ni sentí. Años después sigo sin problemas. Muy recomendable.',
+      'Las dos doctoras son un encanto! Fui con dolor, me recomendaron unas plantillas y las llevo súper cómodas, me las voy cambiando de zapatillas, el dolor ha desaparecido! Las recomiendo a todo el mundo.',
     rating: 5,
-    image: '/images/testimonials/francisco.jpg'
+    image: '/images/testimonials/judith.jpg'
   },
   {
-    name: 'Marta Vidal',
-    role: 'Paciente de pilates',
+    name: 'Arturo Ramírez Muñoz',
+    role: 'Paciente',
     content:
-      'Las clases de pilates terapéutico han mejorado muchísimo mi dolor de espalda. Los fisios explican muy bien cada ejercicio y se adaptan a las necesidades de cada uno.',
+      'Fui porque tenía una molestia en la pierna que me dolía al andar y se me hacía muy incómodo. Decidí ir por recomendación de un amigo y encantado tanto con el trato como con las plantillas que me hicieron!',
     rating: 5,
-    image: '/images/testimonials/marta.jpg'
-  },
-  {
-    name: 'Antonio Pérez',
-    role: 'Paciente desde 2020',
-    content:
-      'Tenía fascitis plantar que me impedía hacer vida normal. El tratamiento combinado de fisioterapia y plantillas fue la solución. Ahora camino kilómetros sin problema alguno.',
-    rating: 5,
-    image: '/images/testimonials/antonio.jpg'
+    image: '/images/testimonials/arturo.jpg'
   }
 ]
 

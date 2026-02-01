@@ -1,28 +1,42 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { ArrowRight, Footprints, Hand, Heart, Dumbbell, Activity } from "lucide-react";
-import { Card, CardHeader, CardTitle, CardDescription, SectionTitle, Button } from "@/components/ui";
-import { SERVICES } from "@/lib/constants";
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import {
+  ArrowRight,
+  Footprints,
+  Hand,
+  Heart,
+  Dumbbell,
+  Activity
+} from 'lucide-react'
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  SectionTitle,
+  Button
+} from '@/components/ui'
+import { SERVICES } from '@/lib/constants'
 
 const iconMap: Record<string, React.ElementType> = {
   Footprints,
   Hand,
   Heart,
   Dumbbell,
-  Activity,
-};
+  Activity
+}
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
+      staggerChildren: 0.1
+    }
+  }
+}
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -31,52 +45,54 @@ const itemVariants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut" as const,
-    },
-  },
-};
+      ease: 'easeOut' as const
+    }
+  }
+}
 
 export function ServicesPreview() {
   return (
-    <section id="servicios" className="section-padding bg-white">
-      <div className="container-custom">
+    <section id='servicios' className='section-padding bg-white'>
+      <div className='container-custom'>
         <SectionTitle
-          subtitle="Nuestros Servicios"
-          title="Cuidamos tu bienestar de forma integral"
-          description="Ofrecemos servicios especializados en podología, fisioterapia, suelo pélvico, pilates terapéutico y ejercicio terapéutico con las técnicas más avanzadas."
+          subtitle='Nuestros Servicios'
+          title='Cuidamos tu bienestar de forma integral'
+          description='Ofrecemos servicios especializados en podología, fisioterapia, suelo pélvico, pilates terapéutico y ejercicio terapéutico con las técnicas más avanzadas.'
         />
 
         <motion.div
           variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6"
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, margin: '-100px' }}
+          className='grid sm:grid-cols-2 lg:grid-cols-5 gap-6'
         >
           {SERVICES.map((service) => {
-            const Icon = iconMap[service.icon] || Footprints;
-            
+            const Icon = iconMap[service.icon] || Footprints
+
             return (
               <motion.div key={service.id} variants={itemVariants}>
                 <Link href={`/servicios#${service.id}`}>
-                  <Card hover className="h-full group cursor-pointer">
+                  <Card hover className='h-full group cursor-pointer'>
                     <CardHeader>
-                      <div className="w-14 h-14 bg-primary-light rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                        <Icon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
+                      <div className='w-14 h-14 bg-primary-light rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300'>
+                        <Icon className='w-7 h-7 text-primary group-hover:text-white transition-colors' />
                       </div>
-                      <CardTitle className="group-hover:text-primary transition-colors">
+                      <CardTitle className='group-hover:text-primary transition-colors'>
                         {service.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardDescription>{service.shortDescription}</CardDescription>
-                    <div className="mt-4 flex items-center gap-1 text-primary font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                    <CardDescription>
+                      {service.shortDescription}
+                    </CardDescription>
+                    <div className='mt-4 flex items-center gap-1 text-primary font-medium text-sm opacity-0 group-hover:opacity-100 transition-opacity'>
                       Más información
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
                     </div>
                   </Card>
                 </Link>
               </motion.div>
-            );
+            )
           })}
         </motion.div>
 
@@ -85,16 +101,16 @@ export function ServicesPreview() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-12 text-center"
+          className='mt-12 text-center'
         >
-          <Link href="/servicios">
-            <Button variant="outline" className="gap-2">
+          <Link href='/servicios'>
+            <Button variant='outline' className='gap-2'>
               Ver todos los servicios
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className='w-4 h-4' />
             </Button>
           </Link>
         </motion.div>
       </div>
     </section>
-  );
+  )
 }
