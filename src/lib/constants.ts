@@ -1,6 +1,6 @@
 // Información de la clínica
 export const CLINIC_INFO = {
-  name: 'Clínica Podológica Gironés',
+  name: 'Clínica Gironés',
   slogan: 'Cuidamos tus pies, mejoramos tu vida',
   description:
     'Clínica especializada en el cuidado integral de tu salud, con más de 30 años de experiencia ofreciendo tratamientos personalizados con la última tecnología.',
@@ -9,6 +9,7 @@ export const CLINIC_INFO = {
   email: 'recepcion@clinicagirones.es',
   address: {
     street: "Carrer d'Armando Palacio Valdés, 11",
+    floor: 'Bajo Derecha',
     neighborhood: 'El Pla del Real',
     city: 'València',
     postalCode: '46010',
@@ -44,15 +45,12 @@ export const SERVICES = [
     fullDescription:
       'Servicio integral de podología orientado al cuidado y la salud de tus pies, con tratamientos personalizados para prevenir, diagnosticar y solucionar diferentes molestias.',
     benefits: [
-      'Prevención de patologías del pie',
-      'Diagnóstico especializado',
-      'Tratamientos personalizados',
-      'Alivio de molestias y dolores'
+      'Estudio biomecánico de la pisada',
+      'Plantillas personalizadas',
+      'Dermatología del pie'
     ],
     icon: 'Footprints',
-    duration: '30-60 min',
-    image:
-      'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&h=600&fit=crop&q=80'
+    image: '/podologia-hero.jpg'
   },
   {
     id: 'fisioterapia',
@@ -62,15 +60,13 @@ export const SERVICES = [
     fullDescription:
       'Servicio integral de fisioterapia orientado a la prevención, tratamiento y recuperación de lesiones, mejorando la movilidad, reduciendo el dolor y favoreciendo el bienestar general.',
     benefits: [
-      'Mejora de la movilidad',
-      'Reducción del dolor',
-      'Recuperación de lesiones',
-      'Bienestar general'
+      'Fisioterapia general',
+      'Fisioterapia pediátrica',
+      'Fisioterapia deportiva',
+      'Aparatología avanzada'
     ],
     icon: 'Hand',
-    duration: '45-60 min',
-    image:
-      'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop&q=80'
+    image: '/fisioterapia-hero.jpg'
   },
   {
     id: 'suelo-pelvico',
@@ -86,9 +82,7 @@ export const SERVICES = [
       'Bienestar integral'
     ],
     icon: 'Heart',
-    duration: '45-60 min',
-    image:
-      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&q=80'
+    image: '/suelo-pelvico-hero.jpg'
   },
   {
     id: 'pilates-terapeutico',
@@ -104,7 +98,6 @@ export const SERVICES = [
       'Ejercicio seguro y personalizado'
     ],
     icon: 'Dumbbell',
-    duration: '60 min',
     image:
       'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&h=600&fit=crop&q=80'
   },
@@ -122,7 +115,6 @@ export const SERVICES = [
       'Ejercicio seguro'
     ],
     icon: 'Activity',
-    duration: '45-60 min',
     image:
       'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop&q=80'
   }
@@ -137,12 +129,10 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     heroDescription:
       'Servicio integral de podología orientado al cuidado y la salud de tus pies, con tratamientos personalizados para prevenir, diagnosticar y solucionar diferentes molestias.',
     icon: 'Footprints',
-    duration: '30-60 min',
-    image:
-      'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800&h=600&fit=crop&q=80',
+    image: '/podologia-hero.jpg',
     highlights: [
-      { label: 'Experiencia', value: '+15 años' },
-      { label: 'Pacientes', value: '+5.000' },
+      { label: 'Experiencia', value: '+30 años' },
+      { label: 'Pacientes', value: '+13.000' },
       { label: 'Tecnología', value: 'Última generación' }
     ],
     treatments: [
@@ -206,14 +196,15 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           {
             id: 'onicocriptosis',
             title: 'Onicocriptosis (uñas encarnadas)',
-            description: 'Alivio del dolor y tratamiento eficaz para evitar infecciones.',
+            description:
+              'Alivio del dolor y tratamiento eficaz para evitar infecciones.',
             icon: 'Scissors'
           },
           {
             id: 'papilomas',
             title: 'Papilomas plantares',
-            description: 'Eliminación de verrugas plantares con técnicas específicas.',
-            badge: 'Láser de alta potencia',
+            description:
+              'Eliminación de verrugas plantares con técnicas específicas.',
             icon: 'Zap'
           },
           {
@@ -230,22 +221,26 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
       {
         step: 1,
         title: 'Consulta inicial',
-        description: 'Evaluación completa de tu historial y estado actual del pie.'
+        description:
+          'Evaluación completa de tu historial y estado actual del pie.'
       },
       {
         step: 2,
         title: 'Diagnóstico',
-        description: 'Análisis detallado para identificar la causa de las molestias.'
+        description:
+          'Análisis detallado para identificar la causa de las molestias.'
       },
       {
         step: 3,
         title: 'Plan de tratamiento',
-        description: 'Diseñamos un tratamiento personalizado según tus necesidades.'
+        description:
+          'Diseñamos un tratamiento personalizado según tus necesidades.'
       },
       {
         step: 4,
         title: 'Seguimiento',
-        description: 'Control y ajuste del tratamiento para garantizar los mejores resultados.'
+        description:
+          'Control y ajuste del tratamiento para garantizar los mejores resultados.'
       }
     ],
     faq: [
@@ -257,17 +252,12 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
       {
         question: '¿Las plantillas personalizadas son para siempre?',
         answer:
-          'Las plantillas tienen una vida útil de 1 a 2 años dependiendo del uso. Es importante revisarlas periódicamente y renovarlas cuando sea necesario para mantener su eficacia.'
+          'Depende del uso que se le dé, pero entre 3-5 años. Es importante revisarlas periódicamente y renovarlas cuando sea necesario para mantener su eficacia.'
       },
       {
         question: '¿El tratamiento de uñas encarnadas es doloroso?',
         answer:
           'Utilizamos anestesia local para garantizar que el tratamiento sea completamente indoloro. La recuperación es rápida y las molestias postoperatorias son mínimas.'
-      },
-      {
-        question: '¿Cuántas sesiones necesito para eliminar un papiloma?',
-        answer:
-          'Depende del tamaño y profundidad del papiloma. Con nuestro láser de alta potencia, normalmente se necesitan entre 1 y 3 sesiones para su eliminación completa.'
       },
       {
         question: '¿Qué incluye una quiropodia o limpieza podológica?',
@@ -284,13 +274,11 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     heroDescription:
       'Servicio integral de fisioterapia orientado a la prevención, tratamiento y recuperación de lesiones, mejorando la movilidad, reduciendo el dolor y favoreciendo el bienestar general.',
     icon: 'Hand',
-    duration: '45-60 min',
-    image:
-      'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop&q=80',
+    image: '/fisioterapia-hero.jpg',
     highlights: [
-      { label: 'Experiencia', value: '+15 años' },
       { label: 'Tecnología', value: 'Avanzada' },
-      { label: 'Tratamiento', value: 'Personalizado' }
+      { label: 'Tratamiento', value: 'Personalizado' },
+      { label: 'Atención', value: 'Integral' }
     ],
     treatments: [
       {
@@ -300,7 +288,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
         description:
           'Tratamos dolencias musculares, articulares y tendinosas, contracturas, y lesiones derivadas de la actividad diaria.',
         longDescription:
-          'Combinamos la terapia manual con las técnicas y tecnología más avanzada para recuperar la funcionalidad y mejorar la calidad de vida de nuestros pacientes. Abordamos todo tipo de dolencias del aparato locomotor con un enfoque integral y personalizado.',
+          'Tratamos dolencias musculares, articulares y tendinosas, contracturas, y lesiones derivadas de la actividad diaria.',
         benefits: [
           'Alivio del dolor muscular y articular',
           'Tratamiento de contracturas',
@@ -321,7 +309,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
         description:
           'Especializada en la prevención y rehabilitación de lesiones relacionadas con la actividad física y el deporte.',
         longDescription:
-          'Ayudamos a deportistas a optimizar su rendimiento, acelerar la recuperación y evitar recaídas mediante un tratamiento específico y adaptado. Trabajamos con deportistas de todos los niveles, desde amateurs hasta profesionales, aplicando las técnicas más avanzadas.',
+          'Especializada en la prevención y rehabilitación de lesiones relacionadas con la actividad física y el deporte. Ayudamos a deportistas a optimizar su rendimiento, acelerar la recuperación y evitar recaídas mediante un tratamiento específico y adaptado.',
         benefits: [
           'Optimización del rendimiento deportivo',
           'Recuperación acelerada de lesiones',
@@ -342,7 +330,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
         description:
           'Atendemos a niños y adolescentes en etapa de crecimiento, abordando alteraciones posturales, problemas musculares o lesiones propias de la infancia.',
         longDescription:
-          'Nuestro objetivo es favorecer un desarrollo saludable y prevenir futuras complicaciones. Trabajamos de forma lúdica y adaptada a cada edad, asegurando que los más pequeños se sientan cómodos durante el tratamiento.',
+          'Atendemos a niños y adolescentes en etapa de crecimiento, abordando alteraciones posturales, problemas musculares o lesiones propias de la infancia. Nuestro objetivo es favorecer un desarrollo saludable y prevenir futuras complicaciones.',
         benefits: [
           'Corrección de alteraciones posturales',
           'Tratamiento de problemas musculares infantiles',
@@ -375,7 +363,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
             id: 'indiba',
             title: 'Indiba',
             description:
-              'Tecnología de radiofrecuencia de última generación que estimula la regeneración de los tejidos, mejora la circulación y reduce el dolor y la inflamación. Tratamiento avanzado y no invasivo que acelera la recuperación funcional.',
+              'Es una tecnología de radiofrecuencia de última generación aplicada en fisioterapia que estimula la regeneración de los tejidos, mejora la circulación y reduce el dolor y la inflamación. Es un tratamiento avanzado y no invasivo, especialmente indicado en procesos de rehabilitación, ya que acelera la recuperación funcional y favorece una vuelta más rápida y segura a la actividad diaria.',
             badge: 'Radiofrecuencia',
             icon: 'Radio'
           },
@@ -383,7 +371,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
             id: 'sistema-superinductivo',
             title: 'Sistema Superinductivo (BTL)',
             description:
-              'Tecnología avanzada que emplea campos electromagnéticos de alta intensidad para aliviar el dolor, reducir la inflamación y estimular la recuperación muscular y articular. Especialmente eficaz en rehabilitación.',
+              'Es una tecnología avanzada utilizada en fisioterapia que emplea campos electromagnéticos de alta intensidad para aliviar el dolor, reducir la inflamación y estimular la recuperación muscular y articular. Es un tratamiento no invasivo especialmente eficaz en procesos de rehabilitación y recuperación funcional.',
             badge: 'Electromagnético',
             icon: 'Zap'
           },
@@ -402,22 +390,26 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
       {
         step: 1,
         title: 'Valoración inicial',
-        description: 'Evaluación completa de tu estado físico, historial y objetivos de recuperación.'
+        description:
+          'Evaluación completa de tu estado físico, historial y objetivos de recuperación.'
       },
       {
         step: 2,
         title: 'Diagnóstico funcional',
-        description: 'Identificamos la causa del problema mediante pruebas específicas.'
+        description:
+          'Identificamos la causa del problema mediante pruebas específicas.'
       },
       {
         step: 3,
         title: 'Plan terapéutico',
-        description: 'Diseñamos un programa de tratamiento personalizado y adaptado a ti.'
+        description:
+          'Diseñamos un programa de tratamiento personalizado y adaptado a ti.'
       },
       {
         step: 4,
         title: 'Tratamiento y seguimiento',
-        description: 'Aplicamos las técnicas más adecuadas y monitorizamos tu evolución.'
+        description:
+          'Aplicamos las técnicas más adecuadas y monitorizamos tu evolución.'
       }
     ],
     faq: [
@@ -437,7 +429,8 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           'No, la complementa. La aparatología como Indiba, BTL o K-Láser potencia los efectos de la terapia manual, acelerando la recuperación. Siempre combinamos ambas para obtener los mejores resultados.'
       },
       {
-        question: '¿A partir de qué edad se puede recibir fisioterapia pediátrica?',
+        question:
+          '¿A partir de qué edad se puede recibir fisioterapia pediátrica?',
         answer:
           'Atendemos a niños desde los primeros meses de vida hasta la adolescencia. Cada tratamiento se adapta a la edad y necesidades específicas del paciente, utilizando técnicas apropiadas y un enfoque lúdico.'
       },
@@ -447,7 +440,12 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           'No, todos nuestros tratamientos con aparatología son indoloros y no invasivos. Podrás sentir una sensación de calor o ligero hormigueo, pero nunca dolor. Son técnicas muy bien toleradas.'
       }
     ],
-    relatedServices: ['podologia', 'suelo-pelvico', 'pilates-terapeutico', 'ejercicio-terapeutico']
+    relatedServices: [
+      'podologia',
+      'suelo-pelvico',
+      'pilates-terapeutico',
+      'ejercicio-terapeutico'
+    ]
   },
   'suelo-pelvico': {
     slug: 'suelo-pelvico',
@@ -456,9 +454,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     heroDescription:
       'La fisioterapia de suelo pélvico está especializada en la prevención y tratamiento de disfunciones relacionadas con la musculatura pélvica, ayudando a mejorar la calidad de vida y el bienestar de nuestros pacientes.',
     icon: 'Heart',
-    duration: '45-60 min',
-    image:
-      'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&q=80',
+    image: '/suelo-pelvico-hero.jpg',
     highlights: [
       { label: 'Especialización', value: 'Exclusiva' },
       { label: 'Tratamiento', value: 'Personalizado' },
@@ -483,19 +479,22 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           {
             id: 'incontinencia-urinaria',
             title: 'Incontinencia urinaria',
-            description: 'Tratamiento de incontinencia de esfuerzo, de urgencia y mixta mediante técnicas de fortalecimiento y reeducación.',
+            description:
+              'Tratamiento de incontinencia de esfuerzo, de urgencia y mixta mediante técnicas de fortalecimiento y reeducación.',
             icon: 'Droplets'
           },
           {
             id: 'alteraciones-anorectales',
             title: 'Alteraciones ano-rectales',
-            description: 'Incontinencia fecal, hemorroides, estreñimiento y prolapsos rectales.',
+            description:
+              'Incontinencia fecal, hemorroides, estreñimiento y prolapsos rectales.',
             icon: 'Shield'
           },
           {
             id: 'prolapsos-genitales',
             title: 'Prolapsos genitales',
-            description: 'Tratamiento conservador y preventivo de prolapsos de órganos pélvicos.',
+            description:
+              'Tratamiento conservador y preventivo de prolapsos de órganos pélvicos.',
             icon: 'Heart'
           }
         ]
@@ -539,25 +538,29 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           {
             id: 'dispareunia',
             title: 'Dispareunia',
-            description: 'Tratamiento del dolor durante las relaciones sexuales, tanto superficial como profunda.',
+            description:
+              'Tratamiento del dolor durante las relaciones sexuales, tanto superficial como profunda.',
             icon: 'Heart'
           },
           {
             id: 'vaginismo',
             title: 'Vaginismo',
-            description: 'Abordaje de la contracción involuntaria que dificulta o impide la penetración.',
+            description:
+              'Abordaje de la contracción involuntaria que dificulta o impide la penetración.',
             icon: 'Shield'
           },
           {
             id: 'vulvodinia',
             title: 'Vulvodinia',
-            description: 'Tratamiento del dolor vulvar crónico sin causa aparente.',
+            description:
+              'Tratamiento del dolor vulvar crónico sin causa aparente.',
             icon: 'Sparkles'
           },
           {
             id: 'anorgasmia',
             title: 'Anorgasmia y disorgasmia',
-            description: 'Abordaje de las dificultades para alcanzar el orgasmo o alteraciones en el mismo.',
+            description:
+              'Abordaje de las dificultades para alcanzar el orgasmo o alteraciones en el mismo.',
             icon: 'Activity'
           }
         ]
@@ -580,19 +583,22 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           {
             id: 'dismenorrea',
             title: 'Dismenorrea',
-            description: 'Tratamiento del dolor menstrual intenso mediante técnicas específicas.',
+            description:
+              'Tratamiento del dolor menstrual intenso mediante técnicas específicas.',
             icon: 'Activity'
           },
           {
             id: 'endometriosis',
             title: 'Endometriosis',
-            description: 'Abordaje fisioterapéutico complementario para el manejo del dolor.',
+            description:
+              'Abordaje fisioterapéutico complementario para el manejo del dolor.',
             icon: 'Heart'
           },
           {
             id: 'dolor-persistente',
             title: 'Dolor pélvico persistente',
-            description: 'Tratamiento integral del dolor crónico de la región pélvica.',
+            description:
+              'Tratamiento integral del dolor crónico de la región pélvica.',
             icon: 'Shield'
           }
         ]
@@ -623,22 +629,26 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
       {
         step: 1,
         title: 'Entrevista inicial',
-        description: 'Conversación confidencial sobre tu historia clínica y síntomas.'
+        description:
+          'Conversación confidencial sobre tu historia clínica y síntomas.'
       },
       {
         step: 2,
         title: 'Valoración física',
-        description: 'Evaluación del estado del suelo pélvico y musculatura asociada.'
+        description:
+          'Evaluación del estado del suelo pélvico y musculatura asociada.'
       },
       {
         step: 3,
         title: 'Plan personalizado',
-        description: 'Diseño de un programa de tratamiento adaptado a tus necesidades.'
+        description:
+          'Diseño de un programa de tratamiento adaptado a tus necesidades.'
       },
       {
         step: 4,
         title: 'Tratamiento y seguimiento',
-        description: 'Sesiones de tratamiento con evaluación continua de tu progreso.'
+        description:
+          'Sesiones de tratamiento con evaluación continua de tu progreso.'
       }
     ],
     faq: [
@@ -658,7 +668,8 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           'Es la especialidad de la fisioterapia que aborda las disfunciones sexuales relacionadas con el suelo pélvico, como el dolor durante las relaciones, el vaginismo o la vulvodinia. Trabajamos para recuperar una vida sexual plena y sin dolor.'
       },
       {
-        question: '¿Los hombres también pueden tener problemas de suelo pélvico?',
+        question:
+          '¿Los hombres también pueden tener problemas de suelo pélvico?',
         answer:
           'Sí, los hombres también pueden sufrir disfunciones del suelo pélvico, especialmente tras cirugías de próstata. Ofrecemos tratamiento especializado para ellos.'
       },
@@ -668,7 +679,11 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           'Trabajamos en un ambiente de máxima confidencialidad y respeto. Las técnicas se explican detalladamente y se realizan con tu consentimiento y comodidad.'
       }
     ],
-    relatedServices: ['fisioterapia', 'pilates-terapeutico', 'ejercicio-terapeutico']
+    relatedServices: [
+      'fisioterapia',
+      'pilates-terapeutico',
+      'ejercicio-terapeutico'
+    ]
   },
   'pilates-terapeutico': {
     slug: 'pilates-terapeutico',
@@ -677,7 +692,6 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     heroDescription:
       'El pilates terapéutico es una modalidad de ejercicio clínico y funcional, supervisada por fisioterapeutas, que se adapta a las necesidades de cada persona tras una valoración previa. Su objetivo es mejorar la postura, la movilidad y el control del movimiento de forma segura, progresiva y personalizada.',
     icon: 'Dumbbell',
-    duration: '60 min',
     image:
       'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&h=600&fit=crop&q=80',
     highlights: [
@@ -880,7 +894,8 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
       {
         step: 1,
         title: 'Valoración inicial',
-        description: 'Evaluación completa de tu estado físico, objetivos y posibles limitaciones.'
+        description:
+          'Evaluación completa de tu estado físico, objetivos y posibles limitaciones.'
       },
       {
         step: 2,
@@ -890,17 +905,20 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
       {
         step: 3,
         title: 'Sesiones supervisadas',
-        description: 'Ejercicio guiado con corrección individual y adaptación continua.'
+        description:
+          'Ejercicio guiado con corrección individual y adaptación continua.'
       },
       {
         step: 4,
         title: 'Progresión y autonomía',
-        description: 'Avance gradual hacia la autonomía en el movimiento y la actividad.'
+        description:
+          'Avance gradual hacia la autonomía en el movimiento y la actividad.'
       }
     ],
     faq: [
       {
-        question: '¿Qué diferencia hay entre pilates terapéutico y pilates convencional?',
+        question:
+          '¿Qué diferencia hay entre pilates terapéutico y pilates convencional?',
         answer:
           'El pilates terapéutico no es una clase estándar: es un programa guiado y progresivo, supervisado por fisioterapeutas, diseñado para que vuelvas a moverte con calidad. Se adapta a patologías específicas y busca una mejora real de la función.'
       },
@@ -932,9 +950,8 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     title: 'Ejercicio Terapéutico',
     subtitle: 'Programa de movimiento planificado y personalizado',
     heroDescription:
-      'Los ejercicios terapéuticos son una herramienta clave dentro de la fisioterapia: un programa de movimiento planificado, progresivo y personalizado, diseñado a partir de una valoración clínica. No se trata de "hacer ejercicio" sin más, sino de entrenar de forma segura aquello que tu cuerpo necesita para reducir el dolor, recuperar movilidad y fuerza, mejorar el control motor y volver a tus actividades diarias o deportivas con confianza.',
+      'El ejercicio terapéutico es una parte fundamental de la fisioterapia para mejorar la movilidad, recuperar la fuerza y prevenir lesiones de forma segura. En nuestra clínica, los programas son diseñados y supervisados por fisioterapeutas, adaptándose a las necesidades de cada paciente, independientemente de su edad o condición física. Las sesiones se realizan en grupos reducidos de máximo 4 personas, organizados tras una valoración previa para que los pacientes compartan un nivel similar de edad, condición física y objetivos terapéuticos, garantizando así un trabajo eficaz y personalizado.',
     icon: 'Activity',
-    duration: '45-60 min',
     image:
       'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop&q=80',
     highlights: [
@@ -1137,22 +1154,26 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
       {
         step: 1,
         title: 'Valoración clínica',
-        description: 'Evaluación completa de tu estado físico, limitaciones y objetivos.'
+        description:
+          'Evaluación completa de tu estado físico, limitaciones y objetivos.'
       },
       {
         step: 2,
         title: 'Diseño del programa',
-        description: 'Creación de un plan de ejercicios personalizado según tu fase y necesidades.'
+        description:
+          'Creación de un plan de ejercicios personalizado según tu fase y necesidades.'
       },
       {
         step: 3,
         title: 'Sesiones guiadas',
-        description: 'Entrenamiento supervisado con corrección técnica y adaptación continua.'
+        description:
+          'Entrenamiento supervisado con corrección técnica y adaptación continua.'
       },
       {
         step: 4,
         title: 'Progresión y autonomía',
-        description: 'Avance gradual hacia la autonomía para mantener resultados a largo plazo.'
+        description:
+          'Avance gradual hacia la autonomía para mantener resultados a largo plazo.'
       }
     ],
     faq: [
@@ -1193,7 +1214,6 @@ export interface ServiceDetail {
   subtitle: string
   heroDescription: string
   icon: string
-  duration: string
   image: string
   highlights: { label: string; value: string }[]
   treatments: Treatment[]
@@ -1235,36 +1255,55 @@ export interface FAQ {
 // Equipo profesional
 export const TEAM_MEMBERS = [
   {
-    name: 'Dr. Ernesto García López',
-    role: 'Director y Podólogo',
-    bio: 'Fundador de la clínica con más de 20 años de experiencia. Especialista en biomecánica y podología deportiva. Colaborador habitual con equipos deportivos profesionales.',
-    image: '/images/team/ernesto.jpg',
+    name: 'Dra. Pilar Gironés Puñet',
+    role: 'Directora y Podóloga',
+    bio: 'Fundadora y directora de la clínica con más de 30 años de experiencia en el sector. Pionera en tratamientos podológicos avanzados y comprometida con la formación continua y la excelencia en el cuidado del paciente.',
+    image: '/images/team/pilar-girones.jpg',
     credentials: [
-      'Grado en Podología - UCM',
-      'Máster en Biomecánica',
-      'Especialista en Podología Deportiva'
+      'Grado en Podología',
+      'Directora de Clínica Gironés',
+      'Más de 30 años de experiencia'
     ]
   },
   {
-    name: 'Dra. María Sánchez Ruiz',
+    name: 'Pilar Cerdá Gironés',
+    role: 'Podóloga y Fisioterapeuta',
+    bio: 'Profesional con doble titulación en podología y fisioterapia, ofreciendo una visión integral del paciente. Más de 6 años de experiencia combinando ambas disciplinas para un tratamiento completo y personalizado.',
+    image: '/images/team/pilar-cerda.jpg',
+    credentials: [
+      'Grado en Podología',
+      'Grado en Fisioterapia',
+      'Más de 6 años de experiencia'
+    ]
+  },
+  {
+    name: 'Alba Romero Alifa',
     role: 'Podóloga',
-    bio: 'Especialista en pie diabético y cirugía podológica. 12 años de experiencia en tratamientos quirúrgicos mínimamente invasivos.',
-    image: '/images/team/maria.jpg',
+    bio: 'Podóloga con más de 4 años de experiencia dedicada al cuidado integral del pie. Comprometida con la atención personalizada y el bienestar de cada paciente.',
+    image: '/images/team/alba-romero.jpg',
     credentials: [
-      'Grado en Podología - UB',
-      'Máster en Cirugía Podológica',
-      'Experta en Pie Diabético'
+      'Grado en Podología',
+      'Más de 4 años de experiencia'
     ]
   },
   {
-    name: 'Carlos Martín Pérez',
-    role: 'Podólogo',
-    bio: 'Especializado en podología pediátrica y plantillas personalizadas. Apasionado por el desarrollo saludable del pie en la infancia.',
-    image: '/images/team/carlos.jpg',
+    name: 'Elena Díaz Comes',
+    role: 'Fisioterapeuta - Suelo Pélvico',
+    bio: 'Fisioterapeuta especializada en suelo pélvico con más de 10 años de experiencia. Experta en el tratamiento de disfunciones del suelo pélvico, rehabilitación postparto y salud íntima femenina y masculina.',
+    image: '/images/team/elena-diaz.jpg',
     credentials: [
-      'Grado en Podología - UV',
-      'Especialista en Podología Infantil',
-      'Técnico Ortopédico'
+      'Grado en Fisioterapia',
+      'Especialista en Suelo Pélvico',
+      'Más de 10 años de experiencia'
+    ]
+  },
+  {
+    name: 'Próximamente',
+    role: 'Nuevo/a especialista',
+    bio: 'Estamos ampliando nuestro equipo para seguir ofreciendo la mejor atención. Pronto contaremos con un nuevo profesional que se sumará a nuestro compromiso con tu salud.',
+    image: '/images/team/placeholder.jpg',
+    credentials: [
+      'Información próximamente'
     ]
   }
 ]
@@ -1370,164 +1409,305 @@ export const TESTIMONIALS = [
 // Artículos del blog
 export const BLOG_POSTS = [
   {
-    slug: '5-consejos-cuidado-diario-pies',
-    title: '5 Consejos para el Cuidado Diario de tus Pies',
+    slug: 'como-cuidar-tus-plantillas',
+    title: 'Cómo cuidar tus plantillas: limpieza, desinfección y consejos prácticos',
     excerpt:
-      'Descubre las rutinas básicas que mantendrán tus pies sanos y libres de problemas. Pequeños hábitos que marcan la diferencia.',
+      'Las plantillas personalizadas son una herramienta clave en podología para mejorar la pisada, reducir sobrecargas y prevenir lesiones. Descubre cómo mantenerlas en óptimas condiciones.',
     content: `
-## La importancia del cuidado diario
+## Cómo cuidar tus plantillas personalizadas
 
-Nuestros pies soportan todo el peso del cuerpo y nos permiten movernos libremente. Sin embargo, a menudo los olvidamos hasta que aparece algún problema. Con estos sencillos consejos, podrás mantener tus pies en óptimas condiciones.
+Las plantillas personalizadas son una herramienta clave en podología para mejorar la pisada, reducir sobrecargas y prevenir lesiones. Para que mantengan su eficacia y durabilidad, es importante realizar un cuidado adecuado en el día a día.
 
-## 1. Higiene diaria adecuada
+En nuestra clínica trabajamos con materiales como el EVA, un componente ligero y amortiguador que ofrece gran comodidad, especialmente en tratamientos biomecánicos. Como cualquier material técnico, necesita ciertos cuidados para conservarse en buen estado.
 
-Lava tus pies todos los días con agua tibia y jabón neutro. Es importante secarlos bien, especialmente entre los dedos, para evitar la humedad que favorece las infecciones por hongos.
+A continuación, te compartimos recomendaciones sencillas para el mantenimiento de tus plantillas.
 
-## 2. Hidratación constante
+## 1. Limpieza regular, siempre a mano
 
-Aplica crema hidratante específica para pies después del baño, evitando la zona entre los dedos. La piel del pie tiende a resecarse, y una buena hidratación previene grietas y durezas.
+Las plantillas deben limpiarse con frecuencia para evitar acumulación de sudor, bacterias u olores.
 
-## 3. Corte correcto de uñas
+Lo ideal es:
+- Utilizar un paño húmedo
+- Agua tibia
+- Jabón neutro suave
 
-Corta las uñas en línea recta, sin redondear las esquinas, para prevenir las uñas encarnadas. Utiliza cortaúñas o tijeras específicas para pies y lima los bordes suavemente.
+Evita sumergirlas completamente, ya que el exceso de agua puede afectar a su estructura y materiales.
 
-## 4. Calzado apropiado
+## 2. Desinfección suave para prevenir hongos y mal olor
 
-Usa zapatos de tu talla, con espacio suficiente para los dedos. Alterna el calzado para permitir que se ventile y evita los tacones muy altos para el uso diario.
+Si las usas muchas horas al día o practicas deporte, es recomendable desinfectarlas de forma ocasional.
 
-## 5. Revisiones periódicas
+Puedes hacerlo con:
+- Sprays específicos para calzado o plantillas
+- Productos desinfectantes suaves (sin alcohol agresivo)
 
-Examina tus pies regularmente en busca de cambios en la piel, uñas o sensibilidad. Ante cualquier anomalía, consulta con un podólogo.
+Esto ayuda a reducir el riesgo de proliferación bacteriana y mantener una correcta higiene.
+
+## 3. Secado natural: nunca con calor directo
+
+Después de limpiarlas, deja que se sequen al aire, en un lugar ventilado.
+
+⚠️ Evita fuentes de calor como:
+- Radiadores
+- Secadores
+- Exposición directa al sol
+
+Los materiales pueden deformarse con temperaturas altas, perdiendo su función amortiguadora.
+
+## 4. Revisión periódica: las plantillas también se desgastan
+
+Aunque estén bien cuidadas, las plantillas sufren desgaste con el uso. Con el tiempo pueden perder parte de su capacidad de amortiguación y corrección por lo que necesites hacer revisiones.
+
+Se recomienda una revisión podológica periódica, aconsejamos máximo un año y medio y especialmente si:
+- Notas molestias nuevas
+- Cambias tu actividad física
+- El material se deforma
+- Han pasado varios meses de uso intensivo
 
 ## Conclusión
 
-El cuidado de los pies es una inversión en tu salud y calidad de vida. Dedicar unos minutos al día a estas rutinas simples puede evitar muchos problemas en el futuro.
+Las plantillas personalizadas son un tratamiento eficaz, pero su mantenimiento diario es esencial para asegurar su comodidad, higiene y efectividad. Con una limpieza adecuada, una buena ventilación y revisiones periódicas, podrás aprovechar al máximo sus beneficios.
+
+Si tienes dudas sobre el estado de tus plantillas o necesitas una revisión, estaremos encantados de ayudarte.
     `,
-    image: '/images/blog/cuidado-pies.jpg',
-    date: '2024-01-15',
-    author: 'Dr. Ernesto García',
-    category: 'Consejos',
+    image: '/images/blog/plantillas.jpg',
+    date: '2025-01-28',
+    author: 'Dra. Pilar Cerdá Gironés',
+    category: 'Podología',
     readTime: '5 min'
   },
   {
-    slug: 'como-elegir-calzado-adecuado',
-    title: 'Cómo Elegir el Calzado Adecuado para tus Pies',
+    slug: 'pie-diabetico-cuidados-diarios',
+    title: 'Pie diabético: Cuidados diarios recomendados',
     excerpt:
-      'Una guía completa para seleccionar el calzado que mejor se adapte a tu tipo de pie y actividad diaria.',
+      'Guía completa de cuidados diarios para el pie diabético: revisión visual, higiene, hidratación, calzado adecuado y señales de alarma que debes conocer.',
     content: `
-## El impacto del calzado en la salud del pie
+## Pie diabético: Cuidados diarios recomendados
 
-El calzado que elegimos tiene un impacto directo en la salud de nuestros pies, rodillas, caderas y espalda. Un zapato inadecuado puede causar desde simples molestias hasta patologías serias.
+## 1. Revisión visual cada día
 
-## Características de un buen calzado
+Observa ambos pies a diario, incluyendo la planta y entre los dedos. Busca:
+- Ampollas o rozaduras
+- Enrojecimiento
+- Grietas o heridas
+- Cambios de color o temperatura
 
-### Talla correcta
-El pie debe tener espacio suficiente para moverse. Compra calzado al final del día, cuando el pie está más hinchado, y deja un centímetro entre el dedo más largo y la punta del zapato.
+Si cuesta ver la planta, puede utilizarse un espejo o pedir ayuda.
 
-### Materiales transpirables
-Opta por materiales naturales como el cuero o textiles transpirables que permitan la ventilación del pie y eviten la sudoración excesiva.
+## 2. Higiene y secado cuidadoso
 
-### Sujeción adecuada
-El calzado debe sujetar bien el pie, especialmente en la zona del talón y el empeine, sin apretar ni causar rozaduras.
+Lava los pies con agua tibia y jabón suave. Evita el agua demasiado caliente, ya que la sensibilidad puede estar reducida.
 
-### Suela flexible pero con soporte
-La suela debe ser lo suficientemente flexible para permitir el movimiento natural del pie, pero con el soporte necesario para absorber impactos.
+Después, seca muy bien, especialmente entre los dedos, para disminuir el riesgo de infecciones por hongos.
 
-## Tipos de calzado según la actividad
+## 3. Hidratación para evitar grietas
 
-### Para el día a día
-Zapatos cómodos con tacón bajo (2-4 cm), horma ancha y buena amortiguación.
+La piel seca favorece fisuras que pueden convertirse en puerta de entrada para bacterias.
 
-### Para deporte
-Calzado específico para cada actividad, renovándolo cuando muestre desgaste.
+Aplica crema hidratante en la planta y talones, evitando la zona entre los dedos.
 
-### Para ocasiones especiales
-Limita el uso de tacones altos a pocas horas y descansa el pie después.
+## 4. Calzado y calcetines adecuados
 
-## Señales de que tu calzado no es adecuado
+El calzado debe ser cómodo, amplio y sin costuras internas que generen presión.
 
-- Dolor o molestias al caminar
-- Aparición de callosidades o durezas
-- Uñas dañadas o encarnadas
-- Fatiga excesiva en pies y piernas
+Un consejo práctico es usar calcetines claros, ya que permiten detectar rápidamente:
+- Pequeñas pérdidas de sangre
+- Secreciones
+- Signos tempranos de infección
+
+Evita caminar descalzo, incluso en casa, para prevenir cortes o golpes.
+
+## 5. Corte correcto de uñas y cuidado profesional
+
+Las uñas deben cortarse rectas y sin apurar demasiado. Ante cualquier duda o dificultad, es preferible acudir al podólogo.
+
+El manejo profesional es especialmente importante si existen:
+- Uñas engrosadas
+- Problemas de visión
+- Pérdida de sensibilidad
+
+## Síntomas de alarma: cuándo consultar de inmediato
+
+Acude cuanto antes a un profesional si aparece:
+- Herida que no mejora en 24–48 h
+- Enrojecimiento, calor o hinchazón
+- Secreción o mal olor
+- Dolor nuevo o aumento de molestias
+- Zonas negras o cambios bruscos de color
+- Fiebre o signos generales de infección
+
+En pie diabético, actuar rápido puede evitar complicaciones importantes.
+
+## La importancia de las revisiones periódicas
+
+Las guías internacionales recomiendan revisiones regulares del pie en personas con diabetes para identificar factores de riesgo y prevenir úlceras antes de que aparezcan.
+
+Un abordaje multidisciplinar (podología, medicina y enfermería) ha demostrado reducir complicaciones y mejorar resultados.
 
 ## Conclusión
 
-Invertir en buen calzado es invertir en salud. Si tienes dudas sobre qué tipo de calzado necesitas, consulta con un podólogo que podrá asesorarte según tu anatomía y necesidades.
+El cuidado del pie diabético se basa en hábitos diarios sencillos: revisar, limpiar, hidratar, usar calzado adecuado y consultar ante cualquier señal de alarma. La prevención es siempre el mejor tratamiento.
+
+Si tienes diabetes, una valoración podológica periódica puede ayudarte a mantener tus pies sanos y seguros.
+
+## Referencias científicas
+
+- Armstrong DG, Boulton AJM, Bus SA. Diabetic Foot Ulcers and Their Recurrence. N Engl J Med. 2017.
+- Lipsky BA et al. 2012 Infectious Diseases Society of America Clinical Practice Guideline for Diabetic Foot Infections. Clin Infect Dis. 2012.
+- Bus SA et al. IWGDF Guidelines on the prevention and management of diabetic foot disease. Diabetes Metab Res Rev. 2020.
+- Boulton AJM et al. Comprehensive foot examination and risk assessment. Diabetes Care. 2008.
     `,
-    image: '/images/blog/calzado.jpg',
-    date: '2024-01-08',
-    author: 'Dra. María Sánchez',
-    category: 'Guías',
+    image: '/images/blog/pie-diabetico.jpg',
+    date: '2025-01-21',
+    author: 'Dra. Pilar Cerdá Gironés',
+    category: 'Podología',
     readTime: '7 min'
   },
   {
-    slug: 'prevencion-pie-diabetico',
-    title: 'Prevención del Pie Diabético: Todo lo que Necesitas Saber',
+    slug: 'rehabilitacion-suelo-pelvico',
+    title: 'Rehabilitación del suelo pélvico: salud, bienestar y calidad de vida',
     excerpt:
-      'Información esencial sobre el cuidado del pie en personas con diabetes y cómo prevenir complicaciones.',
+      'El suelo pélvico es fundamental para la continencia, la estabilidad y la salud sexual. Descubre cómo la fisioterapia especializada puede ayudarte.',
     content: `
-## ¿Qué es el pie diabético?
+## Rehabilitación del suelo pélvico: salud, bienestar y calidad de vida
 
-El pie diabético es una complicación de la diabetes que afecta a los pies debido a la neuropatía (daño en los nervios) y la mala circulación sanguínea. Puede provocar heridas que no cicatrizan, infecciones y, en casos graves, amputaciones.
+El suelo pélvico es un conjunto de músculos y tejidos que sostiene órganos como la vejiga, el útero o el recto. Además, desempeña un papel fundamental en funciones como la continencia urinaria y fecal, la estabilidad del core, la postura y la salud sexual.
 
-## ¿Por qué los diabéticos deben cuidar especialmente sus pies?
+A lo largo de la vida, factores como el embarazo, el parto, la menopausia, el deporte o determinadas intervenciones quirúrgicas pueden alterar esta musculatura, provocando síntomas que afectan directamente a la calidad de vida.
 
-### Neuropatía diabética
-La diabetes puede dañar los nervios, reduciendo la sensibilidad. Esto significa que puedes hacerte daño sin darte cuenta.
+La buena noticia es que la fisioterapia de suelo pélvico constituye un tratamiento eficaz, seguro y respaldado por una sólida evidencia científica.
 
-### Problemas circulatorios
-La mala circulación dificulta la cicatrización de heridas y aumenta el riesgo de infecciones.
+## ¿Cuándo está indicada la rehabilitación del suelo pélvico?
 
-### Mayor riesgo de infecciones
-Los niveles elevados de glucosa favorecen el crecimiento de bacterias y hongos.
+La fisioterapia de suelo pélvico está indicada en disfunciones frecuentes como:
+- Incontinencia urinaria (de esfuerzo, urgencia o mixta)
+- Alteraciones ano-rectales: estreñimiento, hemorroides, incontinencia o prolapsos
+- Prolapsos genitales
+- Embarazo y postparto
+- Tratamiento de cicatrices y recuperación tras episiotomías o cirugías
+- Dolor pélvico crónico, dismenorrea o endometriosis
+- Disfunciones sexuales como dispareunia, vaginismo o vulvodinia
 
-## Medidas de prevención
+## Un abordaje basado en una valoración individual
 
-### Revisión diaria
-Examina tus pies cada día buscando cortes, ampollas, enrojecimiento o cambios en la piel. Usa un espejo si es necesario.
+El tratamiento comienza siempre con una valoración inicial completa y personalizada, que incluye:
+- Historia clínica y hábitos de vida
+- Evaluación postural y funcional
+- Valoración abdominal y diafragmática
+- Exploración específica del suelo pélvico
+- Establecimiento de objetivos terapéuticos individualizados
 
-### Control de la glucosa
-Mantener los niveles de azúcar controlados es fundamental para prevenir complicaciones.
+## Técnicas utilizadas en fisioterapia de suelo pélvico
 
-### Higiene cuidadosa
-Lava tus pies diariamente con agua tibia (comprueba la temperatura con el codo). Sécalos bien, especialmente entre los dedos.
+La rehabilitación combina diferentes herramientas terapéuticas según cada caso, entre ellas:
+- **Terapia manual**, orientada a mejorar la función, liberar tensiones y disminuir el dolor
+- **Educación terapéutica** para comprender el funcionamiento del suelo pélvico y mejorar hábitos a largo plazo
+- **Biofeedback**, que permite aprender a activar y relajar correctamente la musculatura
+- **Ejercicio terapéutico e hipopresivos** para mejorar el control lumbopélvico y la estabilidad del core
 
-### Hidratación
-Aplica crema hidratante evitando la zona entre los dedos.
+Además, se pueden emplear tecnologías avanzadas que favorecen la regeneración tisular, la analgesia y la recuperación funcional en casos específicos.
 
-### Calzado protector
-Usa siempre calzado, incluso en casa. Revisa el interior antes de ponértelo para detectar objetos o irregularidades.
+## Beneficios respaldados por la evidencia científica
 
-### No camines descalzo
-Evita el riesgo de heridas caminando siempre con calzado protector.
+La fisioterapia de suelo pélvico cuenta con una base científica sólida. Numerosos estudios demuestran que el entrenamiento específico de la musculatura pélvica mejora la continencia urinaria, reduce síntomas de prolapsos, disminuye el dolor pélvico y contribuye a una mejor calidad de vida.
 
-## Cuándo acudir al podólogo
+Se trata de un abordaje eficaz tanto en prevención como en tratamiento, especialmente en etapas como el postparto, la menopausia o tras una cirugía.
 
-Consulta inmediatamente si observas:
-- Heridas que no cicatrizan
-- Cambios de color en la piel
-- Hinchazón persistente
-- Uñas encarnadas o infectadas
-- Callosidades o durezas problemáticas
+## Conclusión: una atención especializada y personalizada
+
+La rehabilitación del suelo pélvico va mucho más allá de realizar ejercicios aislados. Se trata de un abordaje integral, individualizado y basado en evidencia, que permite recuperar funcionalidad, confianza y bienestar.
+
+En Clínica Gironés ofrecemos un servicio especializado de fisioterapia de suelo pélvico con valoración individual y tratamiento personalizado.
+
+Si presentas síntomas como pérdidas de orina, dolor pélvico o molestias en el postparto, no los normalices. Una valoración a tiempo puede marcar la diferencia.
+
+## Referencias científicas
+
+- Pelvic floor muscle training versus no treatment for urinary incontinence in women (Cochrane Review) - pubmed.ncbi.nlm.nih.gov/35383288/
+- Effectiveness of Pelvic Floor Muscle Training on Quality of Life in Women with Urinary Incontinence: Systematic Review and Meta-analysis (2023) - pubmed.ncbi.nlm.nih.gov/37374208/
+- Pelvic Floor Physical Therapy for Pelvic Floor Hypertonicity: Systematic Review (2022) - pubmed.ncbi.nlm.nih.gov/34127429/
+- Effectiveness of physical therapy interventions in women with dyspareunia: Systematic Review + Meta-analysis (2023) - pubmed.ncbi.nlm.nih.gov/37712430/
+    `,
+    image: '/images/blog/suelo-pelvico.jpg',
+    date: '2025-01-14',
+    author: 'Elena Díaz Comes',
+    category: 'Suelo Pélvico',
+    readTime: '8 min'
+  },
+  {
+    slug: 'ejercicio-terapeutico-salud-prevencion',
+    title: 'Ejercicio Terapéutico: salud, prevención y recuperación funcional',
+    excerpt:
+      'El ejercicio terapéutico es una de las herramientas más eficaces de la fisioterapia para mejorar la movilidad, recuperar la fuerza y prevenir lesiones de forma segura.',
+    content: `
+## Ejercicio terapéutico: salud, prevención y recuperación funcional
+
+El ejercicio terapéutico es una de las herramientas más eficaces dentro de la fisioterapia para mejorar la movilidad, recuperar la fuerza y prevenir lesiones de forma segura.
+
+A diferencia del ejercicio general, el ejercicio terapéutico está diseñado de manera individualizada y supervisado por fisioterapeutas, adaptándose a las necesidades, edad y condición física de cada paciente.
+
+Su objetivo principal es mejorar la funcionalidad del cuerpo, reducir el dolor y promover una recuperación duradera.
+
+## ¿Por qué es tan importante el ejercicio terapéutico?
+
+El movimiento es esencial para mantener un sistema musculoesquelético saludable. Con el paso del tiempo, el sedentarismo, las lesiones o ciertas patologías pueden provocar pérdida de fuerza, rigidez articular y disminución del equilibrio.
+
+El ejercicio terapéutico permite:
+- Mejorar el tono muscular y la estabilidad corporal
+- Aumentar la fuerza y la resistencia de forma progresiva
+- Reducir el riesgo de recaídas y nuevas lesiones
+- Favorecer una recuperación funcional completa
+- Mejorar la postura y el control del movimiento
+
+## Prevención de lesiones y dolor musculoesquelético
+
+El ejercicio terapéutico es clave tanto en prevención como en tratamiento. Fortalecer la musculatura y mejorar el control motor ayuda a reducir sobrecargas, compensaciones y molestias frecuentes como dolor lumbar, cervical o tendinopatías.
+
+Un buen tono muscular y una correcta estabilidad articular son fundamentales para mantener una vida activa y segura.
+
+## Ejercicio terapéutico en personas mayores: prevención de caídas
+
+En edades avanzadas, la pérdida de fuerza y equilibrio aumenta el riesgo de caídas, una de las principales causas de lesiones y pérdida de autonomía.
+
+Programas específicos de ejercicio terapéutico han demostrado ser eficaces para:
+- Mejorar el equilibrio y la coordinación
+- Aumentar la fuerza en miembros inferiores
+- Reducir significativamente el riesgo de caídas
+- Favorecer la independencia en actividades diarias
+
+El ejercicio se convierte así en una herramienta fundamental para un envejecimiento saludable.
+
+## Un tratamiento activo y personalizado
+
+El ejercicio terapéutico no consiste únicamente en "hacer ejercicios", sino en un abordaje guiado y adaptado, con progresión segura y objetivos funcionales.
+
+En nuestra clínica, las sesiones se realizan en grupos reducidos tras una valoración previa, garantizando un entorno controlado y una atención cercana.
 
 ## Conclusión
 
-La prevención es la mejor herramienta contra las complicaciones del pie diabético. Un seguimiento regular con tu podólogo y endocrino, junto con el autocuidado diario, son claves para mantener tus pies sanos.
+En Clínica Gironés diseñamos programas personalizados de ejercicio terapéutico supervisados por fisioterapeutas, orientados a mejorar tu movilidad, prevenir lesiones y aumentar tu calidad de vida.
+
+## Referencias científicas
+
+- Exercise therapy for chronic low back pain: Systematic Review - pubmed.ncbi.nlm.nih.gov/34580864/
+- Strength training and prevention of falls in older adults: Meta-analysis - pubmed.ncbi.nlm.nih.gov/31060853/
+- Exercise interventions reduce fall risk in older people: Systematic Review (Cochrane) - pubmed.ncbi.nlm.nih.gov/30703208/
+- Therapeutic exercise and musculoskeletal rehabilitation outcomes - pubmed.ncbi.nlm.nih.gov/32861321/
+- Physical activity and muscle strength as protective factors in ageing - pubmed.ncbi.nlm.nih.gov/31813192/
     `,
-    image: '/images/blog/pie-diabetico.jpg',
-    date: '2024-01-01',
-    author: 'Dra. María Sánchez',
-    category: 'Salud',
-    readTime: '8 min'
+    image: '/images/blog/ejercicio-terapeutico.jpg',
+    date: '2025-01-07',
+    author: 'Dra. Pilar Cerdá Gironés',
+    category: 'Fisioterapia',
+    readTime: '6 min'
   }
 ]
 
 // Metadata SEO
 export const SEO_CONFIG = {
-  siteName: 'Clínica Podológica Gironés',
+  siteName: 'Clínica Gironés',
   siteUrl: 'https://clinicagirones.es',
-  defaultTitle: 'Clínica Podológica Gironés | Podología en València',
+  defaultTitle: 'Clínica Gironés | Podología en València',
   defaultDescription:
     'Clínica de podología en València especializada en quiropodia, plantillas personalizadas, pie diabético y podología deportiva. Más de 15 años cuidando tus pies.',
   defaultImage: '/images/og-image.jpg',

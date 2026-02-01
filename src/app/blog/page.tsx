@@ -60,10 +60,10 @@ export default function BlogPage() {
               Blog
             </span>
             <h1 className="text-4xl md:text-5xl font-semibold text-neutral-900 mb-6">
-              Consejos y artículos de salud podológica
+              Consejos y artículos de salud
             </h1>
             <p className="text-lg text-neutral-600 leading-relaxed">
-              Información útil para el cuidado de tus pies, escrita por nuestros profesionales.
+              Información útil escrita por nuestros profesionales.
             </p>
           </motion.div>
         </div>
@@ -159,7 +159,7 @@ export default function BlogPage() {
           <div className="container-custom">
             <SectionTitle
               title="Más artículos"
-              description="Sigue explorando nuestros consejos de salud podológica."
+              description="Sigue explorando nuestros consejos de salud."
               align="left"
             />
 

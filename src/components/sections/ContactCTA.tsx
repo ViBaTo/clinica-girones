@@ -85,7 +85,7 @@ export function ContactCTA() {
                     <div>
                       <h3 className="font-semibold text-white mb-1">Ubicación</h3>
                       <p className="text-primary-100 text-sm">
-                        {CLINIC_INFO.address.street}<br />
+                        {CLINIC_INFO.address.street}, {CLINIC_INFO.address.floor}<br />
                         {CLINIC_INFO.address.postalCode} {CLINIC_INFO.address.city}
                       </p>
                     </div>

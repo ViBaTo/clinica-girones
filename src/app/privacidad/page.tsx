@@ -32,7 +32,7 @@ export default function PrivacidadPage() {
             <h2>1. Responsable del tratamiento</h2>
             <p>
               <strong>Identidad:</strong> {CLINIC_INFO.name}<br />
-              <strong>Dirección:</strong> {CLINIC_INFO.address.street}, {CLINIC_INFO.address.postalCode} {CLINIC_INFO.address.city}<br />
+              <strong>Dirección:</strong> {CLINIC_INFO.address.street}, {CLINIC_INFO.address.floor}, {CLINIC_INFO.address.postalCode} {CLINIC_INFO.address.city}<br />
               <strong>Email:</strong> {CLINIC_INFO.email}<br />
               <strong>Teléfono:</strong> {CLINIC_INFO.phone}
             </p>

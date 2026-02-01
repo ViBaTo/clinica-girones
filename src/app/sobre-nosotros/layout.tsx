@@ -4,11 +4,11 @@ import { SEO_CONFIG } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Sobre Nosotros",
   description:
-    "Conoce al equipo de Clínica Podológica Gironés. Más de 15 años de experiencia en podología en Madrid. Profesionales comprometidos con la salud de tus pies.",
+    "Conoce al equipo de Clínica Gironés. Más de 15 años de experiencia en podología en València. Profesionales comprometidos con la salud de tus pies.",
   openGraph: {
     title: "Sobre Nosotros | " + SEO_CONFIG.siteName,
     description:
-      "Conoce al equipo de Clínica Podológica Gironés. Más de 15 años de experiencia en podología en Madrid.",
+      "Conoce al equipo de Clínica Gironés. Más de 15 años de experiencia en podología en València.",
     url: SEO_CONFIG.siteUrl + "/sobre-nosotros",
   },
   alternates: {

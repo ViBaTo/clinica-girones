@@ -4,9 +4,14 @@ import { cn } from '@/lib/utils'
 interface LogoProps {
   className?: string
   size?: 'sm' | 'md' | 'lg'
+  variant?: 'default' | 'white'
 }
 
-export function Logo({ className, size = 'md' }: LogoProps) {
+export function Logo({
+  className,
+  size = 'md',
+  variant = 'default'
+}: LogoProps) {
   const sizes = {
     sm: { height: 64, width: 90 },
     md: { height: 88, width: 124 },
@@ -19,9 +24,14 @@ export function Logo({ className, size = 'md' }: LogoProps) {
     lg: 'h-28'
   }
 
+  const logoSrc =
+    variant === 'white'
+      ? '/clinica-girones-logo-white.svg'
+      : '/clinica-girones-logo.svg'
+
   return (
     <Image
-      src='/clinica-girones-logo.svg'
+      src={logoSrc}
       alt='Clínica Gironés'
       width={sizes[size].width}
       height={sizes[size].height}

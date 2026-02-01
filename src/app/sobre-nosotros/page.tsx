@@ -62,7 +62,7 @@ export default function SobreNosotrosPage() {
               Conoce a nuestro equipo
             </h1>
             <p className='text-lg text-neutral-600 leading-relaxed'>
-              Profesionales comprometidos con la salud de tus pies desde 2008.
+              Profesionales comprometidos con tu salud desde 1994.
             </p>
           </motion.div>
         </div>
@@ -108,7 +108,7 @@ export default function SobreNosotrosPage() {
                     <Calendar className='w-6 h-6 text-primary' />
                   </div>
                   <div>
-                    <p className='text-2xl font-bold text-neutral-900'>2008</p>
+                    <p className='text-2xl font-bold text-neutral-900'>1994</p>
                     <p className='text-sm text-neutral-500'>Año de fundación</p>
                   </div>
                 </div>
@@ -126,24 +126,29 @@ export default function SobreNosotrosPage() {
                 Nuestra Historia
               </span>
               <h2 className='text-3xl md:text-4xl font-semibold text-neutral-900 mb-6'>
-                Más de 15 años cuidando de tus pies
+                Más de 30 años cuidando de ti
               </h2>
               <div className='space-y-4 text-neutral-600 leading-relaxed'>
                 <p>
-                  Clínica Gironés nació en 2008 con una visión clara: ofrecer
-                  tratamientos podológicos de la más alta calidad con un trato
-                  cercano y personalizado.
+                  Nuestra clínica nació en 1994 con una vocación clara: ofrecer
+                  podología de calidad, con un trato cercano, profesional y
+                  totalmente personalizado.
                 </p>
                 <p>
-                  Fundada por el Dr. Ernesto García López, nuestra clínica ha
-                  crecido hasta convertirse en un referente en Madrid,
-                  atendiendo a más de 5.000 pacientes y siendo colaboradores
-                  habituales de equipos deportivos profesionales.
+                  Bajo la dirección de la Dra. Pilar Gironés Puñet, hemos ido
+                  creciendo contigo, incorporando nuevos enfoques y
+                  especialidades para dar una atención cada vez más completa.
                 </p>
                 <p>
-                  A lo largo de estos años, hemos incorporado las técnicas más
-                  avanzadas y la tecnología más moderna, sin perder nunca de
-                  vista lo más importante: el bienestar de nuestros pacientes.
+                  En 2022 dimos un paso importante ampliando nuestros servicios
+                  e incorporando la fisioterapia. Y a partir de ahora, seguimos
+                  evolucionando para cuidar de tu bienestar de forma integral,
+                  sumando suelo pélvico y pilates a nuestras áreas de atención.
+                </p>
+                <p>
+                  Hoy somos un centro donde la experiencia y la actualización
+                  constante van de la mano, manteniendo siempre lo más
+                  importante: tu salud, tu comodidad y tus resultados.
                 </p>
               </div>
 
@@ -151,15 +156,15 @@ export default function SobreNosotrosPage() {
               <div className='mt-8 pt-8 border-t border-neutral-200'>
                 <div className='grid grid-cols-3 gap-6'>
                   <div>
-                    <p className='text-3xl font-bold text-primary'>+5.000</p>
+                    <p className='text-3xl font-bold text-primary'>+13.000</p>
                     <p className='text-sm text-neutral-500'>Pacientes</p>
                   </div>
                   <div>
-                    <p className='text-3xl font-bold text-primary'>+15</p>
-                    <p className='text-sm text-neutral-500'>Años</p>
+                    <p className='text-3xl font-bold text-primary'>+30</p>
+                    <p className='text-sm text-neutral-500'>Años de experiencia</p>
                   </div>
                   <div>
-                    <p className='text-3xl font-bold text-primary'>3</p>
+                    <p className='text-3xl font-bold text-primary'>5</p>
                     <p className='text-sm text-neutral-500'>Especialistas</p>
                   </div>
                 </div>
@@ -175,22 +180,72 @@ export default function SobreNosotrosPage() {
           <SectionTitle
             subtitle='Nuestro Equipo'
             title='Profesionales a tu servicio'
-            description='Un equipo de podólogos especializados comprometidos con tu salud.'
+            description='Un equipo multidisciplinar de podólogos y fisioterapeutas comprometidos con tu salud y bienestar.'
           />
 
+          {/* Primera fila - 3 miembros */}
           <motion.div
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true }}
-            className='grid md:grid-cols-3 gap-8'
+            className='grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8'
           >
-            {TEAM_MEMBERS.map((member) => (
+            {TEAM_MEMBERS.slice(0, 3).map((member) => (
               <motion.div key={member.name} variants={itemVariants}>
                 <Card className='h-full text-center p-8'>
                   {/* Avatar */}
-                  <div className='w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center'>
-                    <span className='text-4xl font-semibold text-primary'>
+                  <div className='w-28 h-28 mx-auto mb-5 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center'>
+                    <span className='text-3xl font-semibold text-primary'>
+                      {member.name
+                        .split(' ')
+                        .map((n) => n[0])
+                        .join('')
+                        .slice(0, 2)}
+                    </span>
+                  </div>
+
+                  <h3 className='text-xl font-semibold text-neutral-900 mb-1'>
+                    {member.name}
+                  </h3>
+                  <p className='text-primary font-medium mb-4'>{member.role}</p>
+                  <p className='text-neutral-600 text-sm leading-relaxed mb-6'>
+                    {member.bio}
+                  </p>
+
+                  {/* Credentials */}
+                  <div className='pt-6 border-t border-neutral-100'>
+                    <ul className='space-y-2'>
+                      {member.credentials.map((credential, i) => (
+                        <li
+                          key={i}
+                          className='flex items-center justify-center gap-2 text-xs text-neutral-500'
+                        >
+                          <GraduationCap className='w-3.5 h-3.5 text-primary' />
+                          {credential}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Segunda fila - 2 miembros centrados */}
+          <motion.div
+            variants={containerVariants}
+            initial='hidden'
+            whileInView='visible'
+            viewport={{ once: true }}
+            className='grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto'
+          >
+            {TEAM_MEMBERS.slice(3, 5).map((member) => (
+              <motion.div key={member.name} variants={itemVariants}>
+                <Card className='h-full text-center p-8'>
+                  {/* Avatar */}
+                  <div className='w-28 h-28 mx-auto mb-5 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center'>
+                    <span className='text-3xl font-semibold text-primary'>
                       {member.name
                         .split(' ')
                         .map((n) => n[0])

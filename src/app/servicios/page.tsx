@@ -8,7 +8,6 @@ import {
   Heart,
   Dumbbell,
   Activity,
-  Clock,
   CheckCircle,
   ArrowRight
 } from 'lucide-react'
@@ -123,17 +122,11 @@ export default function ServiciosPage() {
                           className='object-cover'
                           sizes='(max-width: 768px) 100vw, 50vw'
                         />
-                        {/* Overlay with duration badge */}
+                        {/* Overlay with icon */}
                         <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent' />
-                        <div className='absolute bottom-4 left-4 flex items-center gap-3'>
-                          <div className='flex items-center gap-2 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg'>
-                            <Clock className='w-4 h-4 text-primary' />
-                            <span className='text-sm font-medium text-neutral-700'>
-                              {service.duration}
-                            </span>
-                          </div>
-                          <div className='w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg'>
-                            <Icon className='w-5 h-5 text-white' />
+                        <div className='absolute bottom-4 left-4'>
+                          <div className='w-12 h-12 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg'>
+                            <Icon className='w-6 h-6 text-primary' />
                           </div>
                         </div>
                       </div>
@@ -170,7 +163,10 @@ export default function ServiciosPage() {
                         {/* Benefits */}
                         <div className='mb-8'>
                           <h3 className='text-sm font-semibold text-neutral-900 uppercase tracking-wider mb-4'>
-                            Beneficios
+                            {service.id === 'podologia' ||
+                            service.id === 'fisioterapia'
+                              ? 'Servicios'
+                              : 'Beneficios'}
                           </h3>
                           <ul className='grid sm:grid-cols-2 gap-3'>
                             {service.benefits.map((benefit, i) => (
