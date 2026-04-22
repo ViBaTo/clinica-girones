@@ -16,8 +16,7 @@ export const CLINIC_INFO = {
     country: 'España'
   },
   hours: [
-    { days: 'Lunes - Jueves', hours: '9:00 - 13:30 / 16:00 - 20:00' },
-    { days: 'Viernes', hours: '9:00 - 13:30' }
+    { days: 'Lunes - Viernes', hours: '9:00 - 13:30 / 16:00 - 20:00' }
   ],
   socialMedia: {
     instagram: 'https://www.instagram.com/clinicagirones/'

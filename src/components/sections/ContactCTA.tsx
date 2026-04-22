@@ -100,10 +100,10 @@ export function ContactCTA() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-white mb-1">Horario</h3>
-                      <div className="text-primary-100 text-sm space-y-0.5">
+                      <div className="text-white text-sm space-y-0.5">
                         {CLINIC_INFO.hours.map((schedule, index) => (
-                          <p key={index}>
-                            <span className="text-white/70">{schedule.days}:</span>{" "}
+                          <p key={index} className="text-white">
+                            <span className="text-white/80">{schedule.days}:</span>{" "}
                             {schedule.hours}
                           </p>
                         ))}

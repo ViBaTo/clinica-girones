@@ -350,14 +350,6 @@ export default function ContactoPage() {
                 a: 'Sí, trabajamos con cita previa para poder ofrecerte la atención que mereces. Puedes pedir cita por teléfono, WhatsApp o a través del formulario.'
               },
               {
-                q: '¿Cuánto dura una consulta?',
-                a: 'Depende del tratamiento. Una quiropodia básica dura entre 30-45 minutos, mientras que un estudio biomecánico puede durar hasta 60 minutos.'
-              },
-              {
-                q: '¿Aceptáis seguros médicos?',
-                a: 'Trabajamos principalmente de forma privada, pero podemos facilitarte factura para que la presentes a tu seguro si cubre podología.'
-              },
-              {
                 q: '¿Qué formas de pago aceptáis?',
                 a: 'Aceptamos pago en efectivo, tarjeta de crédito/débito y Bizum.'
               }
