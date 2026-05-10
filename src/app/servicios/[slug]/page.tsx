@@ -92,12 +92,13 @@ const itemVariants = {
 export default function ServiceDetailPage() {
   const params = useParams()
   const slug = params.slug as string
+  const serviceDetail = SERVICES_DETAIL[slug]
+  const isSingleTreatment = serviceDetail?.treatments.length === 1
+
   const [openFaq, setOpenFaq] = useState<number | null>(null)
   const [expandedTreatment, setExpandedTreatment] = useState<string | null>(
-    null
+    isSingleTreatment ? serviceDetail.treatments[0].id : null
   )
-
-  const serviceDetail = SERVICES_DETAIL[slug]
 
   if (!serviceDetail) {
     notFound()
@@ -258,14 +259,17 @@ export default function ServiceDetailPage() {
             className='text-center mb-16'
           >
             <span className='inline-block text-primary font-medium text-sm uppercase tracking-wider mb-3'>
-              Nuestros Tratamientos
+              {isSingleTreatment ? 'Nuestro Programa' : 'Nuestros Tratamientos'}
             </span>
-            <h2 className='text-3xl md:text-4xl font-semibold text-neutral-900 mb-4'>
-              Soluciones especializadas para cada necesidad
+            <h2 className='text-3xl md:text-4xl font-bold text-neutral-900 mb-4'>
+              {isSingleTreatment
+                ? 'Un programa diseñado para ti'
+                : 'Soluciones especializadas para cada necesidad'}
             </h2>
             <p className='text-lg text-neutral-600 max-w-2xl mx-auto'>
-              Ofrecemos una amplia gama de tratamientos podológicos adaptados a
-              cada paciente.
+              {isSingleTreatment
+                ? 'Un programa de ejercicio personalizado y supervisado, adaptado a las necesidades de cada paciente.'
+                : 'Ofrecemos una amplia variedad de tratamientos adaptados a cada paciente.'}
             </p>
           </motion.div>
 
@@ -279,16 +283,22 @@ export default function ServiceDetailPage() {
             {serviceDetail.treatments.map((treatment) => {
               const TreatmentIcon = iconMap[treatment.icon] || Footprints
               const isExpanded = expandedTreatment === treatment.id
+              const HeaderTag = isSingleTreatment ? 'div' : 'button'
 
               return (
                 <motion.div key={treatment.id} variants={itemVariants}>
                   <Card className='p-0 overflow-hidden'>
                     {/* Treatment Header */}
-                    <button
-                      onClick={() =>
-                        setExpandedTreatment(isExpanded ? null : treatment.id)
-                      }
-                      className='w-full p-6 md:p-8 flex items-start gap-6 text-left hover:bg-neutral-50/50 transition-colors'
+                    <HeaderTag
+                      {...(!isSingleTreatment && {
+                        onClick: () =>
+                          setExpandedTreatment(isExpanded ? null : treatment.id)
+                      })}
+                      className={`w-full p-6 md:p-8 flex items-start gap-6 text-left ${
+                        isSingleTreatment
+                          ? ''
+                          : 'hover:bg-neutral-50/50 transition-colors'
+                      }`}
                     >
                       <div className='w-16 h-16 bg-primary-light rounded-2xl flex items-center justify-center flex-shrink-0'>
                         <TreatmentIcon className='w-8 h-8 text-primary' />
@@ -297,18 +307,22 @@ export default function ServiceDetailPage() {
                         <h3 className='text-xl md:text-2xl font-semibold text-neutral-900 mb-2'>
                           {treatment.title}
                         </h3>
-                        <p className='text-neutral-600 leading-relaxed'>
-                          {treatment.description}
-                        </p>
+                        {treatment.description && (
+                          <p className='text-neutral-600 leading-relaxed'>
+                            {treatment.description}
+                          </p>
+                        )}
                       </div>
-                      <div className='flex-shrink-0 mt-1'>
-                        <div
-                          className={`w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
-                        >
-                          <ChevronDown className='w-5 h-5 text-neutral-600' />
+                      {!isSingleTreatment && (
+                        <div className='flex-shrink-0 mt-1'>
+                          <div
+                            className={`w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+                          >
+                            <ChevronDown className='w-5 h-5 text-neutral-600' />
+                          </div>
                         </div>
-                      </div>
-                    </button>
+                      )}
+                    </HeaderTag>
 
                     {/* Expanded Content */}
                     <AnimatePresence>

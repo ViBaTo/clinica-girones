@@ -168,7 +168,7 @@ export function Testimonials() {
               <span className='font-semibold text-neutral-900'>4.8</span> en
               Google
               <span className='text-neutral-400 mx-2'>•</span>
-              89 reseñas
+              101 reseñas
             </span>
           </div>
 

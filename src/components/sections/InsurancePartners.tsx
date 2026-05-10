@@ -7,6 +7,8 @@ const INSURANCE_LOGOS = [
   { name: "Muface", src: "/aseguradoras/Muface-logo.svg" },
   { name: "Mugeju", src: "/aseguradoras/Mugeju-logo.svg" },
   { name: "ISFAS", src: "/aseguradoras/ISFAS-LOGO.svg" },
+  { name: "IBV", src: "/aseguradoras/IBV-logo.svg" },
+  { name: "AIDIMME", src: "/aseguradoras/AIDIMME-logo.svg" },
 ];
 
 export function InsurancePartners() {
@@ -15,15 +17,6 @@ export function InsurancePartners() {
 
   return (
     <section className="py-12 md:py-16 bg-neutral-50 overflow-hidden">
-      <div className="container-custom text-center mb-8">
-        <p className="text-sm uppercase tracking-wider text-primary font-medium mb-2">
-          Colaboraciones
-        </p>
-        <h2 className="text-xl md:text-2xl font-semibold text-neutral-800">
-          Trabajamos con las principales aseguradoras
-        </h2>
-      </div>
-
       {/* Marquee Container */}
       <div className="relative">
         {/* Gradient overlays for smooth edges */}

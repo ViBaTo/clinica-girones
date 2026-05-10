@@ -57,7 +57,7 @@ export function ServicesPreview() {
         <SectionTitle
           subtitle='Nuestros Servicios'
           title='Cuidamos tu bienestar de forma integral'
-          description='Ofrecemos servicios especializados en podología, fisioterapia, suelo pélvico, pilates terapéutico y ejercicio terapéutico con las técnicas más avanzadas.'
+          description='Ofrecemos servicios especializados en podología, fisioterapia, suelo pélvico, pilates y ejercicio terapéutico, utilizando las técnicas más avanzadas y un enfoque personalizado.'
         />
 
         <motion.div

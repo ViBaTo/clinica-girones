@@ -3,8 +3,9 @@ export const CLINIC_INFO = {
   name: 'Clínica Gironés',
   slogan: 'Cuidamos tus pies, mejoramos tu vida',
   description:
-    'Clínica especializada en el cuidado integral de tu salud, con más de 30 años de experiencia ofreciendo tratamientos personalizados con la última tecnología.',
+    'Más de 30 años de experiencia en tratamientos podológicos personalizados, ahora con más servicios para mejorar tu salud paso a paso.',
   phone: '+34 963 601 380',
+  mobile: '+34 657 98 24 45',
   whatsapp: '+34 657 982 445',
   email: 'recepcion@clinicagirones.es',
   address: {
@@ -40,7 +41,7 @@ export const SERVICES = [
     id: 'podologia',
     title: 'Podología',
     shortDescription:
-      'Cuidado integral de tus pies con tratamientos personalizados para prevenir y solucionar molestias.',
+      'Cuidado integral de los pies, con diagnóstico y tratamientos personalizados para prevenir y solucionar patologías.',
     fullDescription:
       'Servicio integral de podología orientado al cuidado y la salud de tus pies, con tratamientos personalizados para prevenir, diagnosticar y solucionar diferentes molestias.',
     benefits: [
@@ -49,13 +50,13 @@ export const SERVICES = [
       'Dermatología del pie'
     ],
     icon: 'Footprints',
-    image: '/podologia-hero.jpg'
+    image: '/podologia-hero.png'
   },
   {
     id: 'fisioterapia',
     title: 'Fisioterapia',
     shortDescription:
-      'Prevención, tratamiento y recuperación de lesiones para mejorar tu movilidad y bienestar.',
+      'Prevención, recuperación y mantenimiento para mejorar la movilidad, la funcionalidad y la calidad de vida.',
     fullDescription:
       'Servicio integral de fisioterapia orientado a la prevención, tratamiento y recuperación de lesiones, mejorando la movilidad, reduciendo el dolor y favoreciendo el bienestar general.',
     benefits: [
@@ -71,7 +72,7 @@ export const SERVICES = [
     id: 'suelo-pelvico',
     title: 'Suelo Pélvico',
     shortDescription:
-      'Fisioterapia especializada en disfunciones de la musculatura pélvica para mejorar tu calidad de vida.',
+      'Fisioterapia especializada en disfunciones de la musculatura pélvica para mejorar tu bienestar a largo plazo.',
     fullDescription:
       'La fisioterapia de suelo pélvico está especializada en la prevención y tratamiento de disfunciones relacionadas con la musculatura pélvica, ayudando a mejorar la calidad de vida y el bienestar de nuestros pacientes.',
     benefits: [
@@ -81,7 +82,7 @@ export const SERVICES = [
       'Bienestar integral'
     ],
     icon: 'Heart',
-    image: '/suelo-pelvico-hero.jpg'
+    image: '/suelo-pelvico-hero.png'
   },
   {
     id: 'pilates-terapeutico',
@@ -97,14 +98,13 @@ export const SERVICES = [
       'Ejercicio seguro y personalizado'
     ],
     icon: 'Dumbbell',
-    image:
-      'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&h=600&fit=crop&q=80'
+    image: '/pilates-terapeutico-hero.jpg'
   },
   {
     id: 'ejercicio-terapeutico',
     title: 'Ejercicio Terapéutico',
     shortDescription:
-      'Parte fundamental de la fisioterapia para mejorar movilidad, fuerza y prevenir lesiones.',
+      'Parte fundamental de la fisioterapia para mejorar movilidad, fuerza, tratamiento y prevención de lesiones.',
     fullDescription:
       'El ejercicio terapéutico es una parte fundamental de la fisioterapia para mejorar la movilidad, recuperar la fuerza y prevenir lesiones de forma segura.',
     benefits: [
@@ -114,8 +114,7 @@ export const SERVICES = [
       'Ejercicio seguro'
     ],
     icon: 'Activity',
-    image:
-      'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop&q=80'
+    image: '/ejercicio-terapeutico-hero.jpg'
   }
 ]
 
@@ -128,7 +127,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     heroDescription:
       'Servicio integral de podología orientado al cuidado y la salud de tus pies, con tratamientos personalizados para prevenir, diagnosticar y solucionar diferentes molestias.',
     icon: 'Footprints',
-    image: '/podologia-hero.jpg',
+    image: '/podologia-hero.png',
     highlights: [
       { label: 'Experiencia', value: '+30 años' },
       { label: 'Pacientes', value: '+13.000' },
@@ -140,9 +139,9 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
         title: 'Estudio biomecánico de la pisada',
         icon: 'Activity',
         description:
-          'Realizamos un análisis exhaustivo de la pisada y la postura para identificar alteraciones que puedan repercutir en pies, rodillas, caderas o espalda.',
+          'Realizamos una exploración de cadera, rodilla y pie para identificar las posibles causas de la sintomatología de cada paciente.',
         longDescription:
-          'Se trata de un estudio altamente recomendable tanto en pacientes sin sintomatología, como medida preventiva, como en deportistas, niños en etapa de crecimiento y personas con patologías musculoesqueléticas, contribuyendo a optimizar la biomecánica y prevenir futuras lesiones.',
+          'Este estudio es altamente recomendable como medida preventiva en pacientes asintomáticos, incluyendo a deportistas, niños en etapa de crecimiento y personas con patologías musculoesqueléticas. Su objetivo es optimizar la biomecánica y evitar futuras lesiones.',
         benefits: [
           'Análisis completo de pisada y postura',
           'Identificación de alteraciones biomecánicas',
@@ -153,7 +152,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           'Deportistas',
           'Niños en crecimiento',
           'Pacientes con patologías musculoesqueléticas',
-          'Prevención sin sintomatología'
+          'Prevención en pacientes asintomáticos'
         ]
       },
       {
@@ -161,13 +160,13 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
         title: 'Plantillas personalizadas',
         icon: 'Layers',
         description:
-          'Diseñamos plantillas a medida adaptadas a cada paciente, con el objetivo de corregir la pisada, mejorar la estabilidad y aliviar dolores.',
+          'Diseñamos las plantillas a medida adaptadas a cada paciente, con el objetivo de: mejorar su pisada y aliviar su sintomatología.',
         longDescription:
-          'Cada plantilla se fabrica de forma personalizada tras un estudio completo del pie y la pisada del paciente, garantizando la máxima eficacia en la corrección y el confort.',
+          'Cada plantilla se diseña de forma personalizada después de realizar el estudio completo.',
         benefits: [
-          'Corrección de la pisada',
-          'Mejora de la estabilidad',
-          'Alivio de dolores',
+          'Mejora de la biomecánica',
+          'Mayor estabilidad',
+          'Alivio de sintomatología',
           'Prevención de futuras lesiones'
         ],
         recommendedFor: [
@@ -196,21 +195,21 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
             id: 'onicocriptosis',
             title: 'Onicocriptosis (uñas encarnadas)',
             description:
-              'Alivio del dolor y tratamiento eficaz para evitar infecciones.',
+              'Alivio del dolor y reeducación ungueal para evitar recidivas.',
             icon: 'Scissors'
           },
           {
             id: 'papilomas',
-            title: 'Papilomas plantares',
+            title: 'Papilomas plantares (virus del papiloma humano – VPH)',
             description:
-              'Eliminación de verrugas plantares con técnicas específicas.',
+              'Eliminación de verrugas plantares con técnicas avanzadas (K-Láser).',
             icon: 'Zap'
           },
           {
             id: 'quiropodias',
             title: 'Quiropodias (limpiezas podológicas)',
             description:
-              'Eliminación de durezas, callosidades y cuidado general del pie para mantenerlo sano.',
+              'Eliminación de durezas, callosidades y cuidado general del pie para evitar complicaciones a largo plazo. De gran importancia para el paciente diabético.',
             icon: 'Sparkles'
           }
         ]
@@ -227,7 +226,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
         step: 2,
         title: 'Diagnóstico',
         description:
-          'Análisis detallado para identificar la causa de las molestias.'
+          'Análisis detallado para identificar la causa de la patología.'
       },
       {
         step: 3,
@@ -251,12 +250,12 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
       {
         question: '¿Las plantillas personalizadas son para siempre?',
         answer:
-          'Depende del uso que se le dé, pero entre 3-5 años. Es importante revisarlas periódicamente y renovarlas cuando sea necesario para mantener su eficacia.'
+          'Depende del uso que se le dé, pero entre 2-3 años. Es importante revisarlas periódicamente y renovarlas cuando sea necesario para mantener su eficacia.'
       },
       {
         question: '¿El tratamiento de uñas encarnadas es doloroso?',
         answer:
-          'Utilizamos anestesia local para garantizar que el tratamiento sea completamente indoloro. La recuperación es rápida y las molestias postoperatorias son mínimas.'
+          'Se trata de un procedimiento que puede cursar con sintomatología dolorosa leve durante su ejecución; no obstante, gracias a nuestra metodología, la recuperación suele ser rápida y los pacientes notan alivio en un corto plazo.'
       },
       {
         question: '¿Qué incluye una quiropodia o limpieza podológica?',
@@ -285,9 +284,9 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
         title: 'Fisioterapia general',
         icon: 'Hand',
         description:
-          'Tratamos dolencias musculares, articulares y tendinosas, contracturas, y lesiones derivadas de la actividad diaria.',
+          'Tratamos patologías musculares, articulares y tendinosas, contracturas, y lesiones derivadas de la actividad diaria.',
         longDescription:
-          'Tratamos dolencias musculares, articulares y tendinosas, contracturas, y lesiones derivadas de la actividad diaria.',
+          'Abordamos de forma integral patologías musculares, articulares y tendinosas, desde contracturas crónicas hasta lesiones derivadas de la actividad diaria, con el objetivo de restaurar su movilidad y bienestar.',
         benefits: [
           'Alivio del dolor muscular y articular',
           'Tratamiento de contracturas',
@@ -308,7 +307,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
         description:
           'Especializada en la prevención y rehabilitación de lesiones relacionadas con la actividad física y el deporte.',
         longDescription:
-          'Especializada en la prevención y rehabilitación de lesiones relacionadas con la actividad física y el deporte. Ayudamos a deportistas a optimizar su rendimiento, acelerar la recuperación y evitar recaídas mediante un tratamiento específico y adaptado.',
+          'Nuestro objetivo es favorecer un desarrollo saludable y prevenir futuras complicaciones.',
         benefits: [
           'Optimización del rendimiento deportivo',
           'Recuperación acelerada de lesiones',
@@ -371,7 +370,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
             title: 'Sistema Superinductivo (BTL)',
             description:
               'Es una tecnología avanzada utilizada en fisioterapia que emplea campos electromagnéticos de alta intensidad para aliviar el dolor, reducir la inflamación y estimular la recuperación muscular y articular. Es un tratamiento no invasivo especialmente eficaz en procesos de rehabilitación y recuperación funcional.',
-            badge: 'Electromagnético',
+            badge: 'Magnetoterapia',
             icon: 'Zap'
           },
           {
@@ -381,6 +380,14 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
               'Láser terapéutico de alta potencia para aliviar el dolor, reducir la inflamación y favorecer la regeneración de los tejidos. Tratamiento no invasivo, seguro y confortable, indicado en lesiones agudas y crónicas (tendón, músculo y articulación). Sesiones rápidas que aceleran la recuperación y facilitan la vuelta a la actividad física.',
             badge: 'Láser terapéutico',
             icon: 'Sparkles'
+          },
+          {
+            id: 'ecografo',
+            title: 'Ecógrafo',
+            description:
+              'Método de imagen no invasivo basado en la emisión y recepción de ondas ultrasónicas que permiten la visualización dinámica de estructuras musculoesqueléticas (músculos, tendones, ligamentos, fascias, bursas y nervios periféricos), con fines diagnósticos, de seguimiento evolutivo y de guía para intervenciones fisioterapéuticas.',
+            badge: 'Ecografía',
+            icon: 'Stethoscope'
           }
         ]
       }
@@ -453,7 +460,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     heroDescription:
       'La fisioterapia de suelo pélvico está especializada en la prevención y tratamiento de disfunciones relacionadas con la musculatura pélvica, ayudando a mejorar la calidad de vida y el bienestar de nuestros pacientes.',
     icon: 'Heart',
-    image: '/suelo-pelvico-hero.jpg',
+    image: '/suelo-pelvico-hero.png',
     highlights: [
       { label: 'Especialización', value: 'Exclusiva' },
       { label: 'Tratamiento', value: 'Personalizado' },
@@ -691,8 +698,7 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     heroDescription:
       'El pilates terapéutico es una modalidad de ejercicio clínico y funcional, supervisada por fisioterapeutas, que se adapta a las necesidades de cada persona tras una valoración previa. Su objetivo es mejorar la postura, la movilidad y el control del movimiento de forma segura, progresiva y personalizada.',
     icon: 'Dumbbell',
-    image:
-      'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&h=600&fit=crop&q=80',
+    image: '/pilates-terapeutico-hero.jpg',
     highlights: [
       { label: 'Supervisión', value: 'Fisioterapeutas' },
       { label: 'Programa', value: 'Personalizado' },
@@ -700,192 +706,23 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     ],
     treatments: [
       {
-        id: 'dolor-espalda',
-        title: 'Dolor de espalda',
-        icon: 'Activity',
-        description:
-          'Tratamiento de lumbalgia, cervicalgia, dorsalgia, episodios recurrentes de contracturas, ciática y dolor irradiado de origen mecánico.',
+        id: 'pilates-terapeutico',
+        title: 'Pilates Terapéutico',
+        icon: 'Dumbbell',
+        description: '',
         longDescription:
-          'A través del trabajo de respiración, estabilidad lumbopélvica, fuerza de la musculatura profunda y corrección de patrones de movimiento, ayudamos a reducir el dolor, recuperar la función y prevenir recaídas.',
+          'Programa de ejercicios personalizados y supervisados, adaptado a las necesidades de cada paciente. Combina el control de la respiración con el trabajo de la musculatura profunda (CORE), la alineación corporal y la movilidad articular para restaurar el equilibrio físico y mejorar la funcionalidad.',
         benefits: [
-          'Reducción del dolor',
-          'Mejora de la estabilidad lumbopélvica',
-          'Fortalecimiento musculatura profunda',
-          'Prevención de recaídas'
+          'Corrección de la higiene postural',
+          'Fortalecimiento del centro (CORE)',
+          'Alivio de tensiones musculares',
+          'Mejora de la flexibilidad y equilibrio'
         ],
         recommendedFor: [
-          'Lumbalgia',
-          'Cervicalgia',
-          'Dorsalgia',
-          'Ciática mecánica'
-        ]
-      },
-      {
-        id: 'alteraciones-posturales',
-        title: 'Alteraciones posturales',
-        icon: 'User',
-        description:
-          'Corrección de hipercifosis, hiperlordosis, escoliosis leve-moderada, dolor por malas posturas, rigidez y desequilibrios musculares.',
-        longDescription:
-          'Trabajamos la corrección postural mediante ejercicios específicos que mejoran la alineación corporal, reducen la rigidez y equilibran la musculatura para prevenir molestias.',
-        benefits: [
-          'Corrección postural',
-          'Reducción de rigidez',
-          'Equilibrio muscular',
-          'Prevención de dolor'
-        ],
-        recommendedFor: [
-          'Hipercifosis',
-          'Hiperlordosis',
-          'Escoliosis leve-moderada',
-          'Dolor por malas posturas'
-        ]
-      },
-      {
-        id: 'patologia-hombro-cuello',
-        title: 'Patología de hombro y cuello',
-        icon: 'Shield',
-        description:
-          'Tratamiento de tendinopatías del manguito rotador, síndrome subacromial, rigidez, molestias por sobreuso y tensión cervicodorsal.',
-        longDescription:
-          'Abordamos las patologías de hombro y cuello mediante ejercicios que mejoran la movilidad, fortalecen la musculatura estabilizadora y reducen la tensión acumulada.',
-        benefits: [
-          'Mejora de la movilidad',
-          'Fortalecimiento estabilizadores',
-          'Reducción de la tensión',
-          'Prevención de lesiones'
-        ],
-        recommendedFor: [
-          'Tendinopatías manguito rotador',
-          'Síndrome subacromial',
-          'Tensión cervicodorsal',
-          'Rigidez de hombro'
-        ]
-      },
-      {
-        id: 'lesiones-miembro-inferior',
-        title: 'Lesiones de cadera, rodilla y tobillo',
-        icon: 'Footprints',
-        description:
-          'Dolor femoropatelar, tendinopatías (rotuliana, aquiles), inestabilidad, esguinces de tobillo, sobrecargas y molestias al correr o entrenar.',
-        longDescription:
-          'Programa específico para lesiones del miembro inferior que mejora la estabilidad, fortalece la musculatura y permite una vuelta segura a la actividad física.',
-        benefits: [
-          'Mejora de la estabilidad',
-          'Fortalecimiento muscular',
-          'Recuperación funcional',
-          'Vuelta segura al deporte'
-        ],
-        recommendedFor: [
-          'Dolor femoropatelar',
-          'Tendinopatía rotuliana/aquiles',
-          'Esguinces de tobillo',
-          'Sobrecargas deportivas'
-        ]
-      },
-      {
-        id: 'tendinopatias-sobreuso',
-        title: 'Tendinopatías y lesiones por sobreuso',
-        icon: 'Zap',
-        description:
-          'Epicondilalgia (codo de tenista), fascitis plantar, periostitis, sobrecargas musculares y molestias asociadas a movimientos repetidos.',
-        longDescription:
-          'Tratamiento de lesiones por sobreuso mediante ejercicios progresivos que permiten la recuperación del tendón y la vuelta a la actividad sin recaídas.',
-        benefits: [
-          'Recuperación tendinosa',
-          'Reducción del dolor',
-          'Readaptación progresiva',
-          'Prevención de recaídas'
-        ],
-        recommendedFor: [
-          'Epicondilalgia',
-          'Fascitis plantar',
-          'Periostitis',
-          'Sobrecargas musculares'
-        ]
-      },
-      {
-        id: 'rehabilitacion-postoperatorio',
-        title: 'Rehabilitación y postoperatorios',
-        icon: 'Stethoscope',
-        description:
-          'Recuperación tras cirugía, inmovilización o periodos de inactividad, mejorando fuerza, movilidad y confianza en el movimiento.',
-        longDescription:
-          'Programa guiado y progresivo para recuperar la función tras cirugías o periodos de inactividad, trabajando la fuerza, movilidad y el control motor de forma segura.',
-        benefits: [
-          'Recuperación de fuerza',
-          'Mejora de movilidad',
-          'Confianza en el movimiento',
-          'Progresión segura'
-        ],
-        recommendedFor: [
-          'Postoperatorios',
-          'Tras inmovilización',
-          'Periodos de inactividad',
-          'Recuperación funcional'
-        ]
-      },
-      {
-        id: 'dolor-cronico',
-        title: 'Dolor crónico y síndrome miofascial',
-        icon: 'HeartPulse',
-        description:
-          'Dolor persistente, rigidez, pérdida de condición física, fatiga y miedo al movimiento.',
-        longDescription:
-          'Abordaje del dolor crónico mediante ejercicio terapéutico progresivo que ayuda a recuperar la confianza en el movimiento, mejorar la condición física y reducir el dolor.',
-        benefits: [
-          'Reducción del dolor',
-          'Mejora condición física',
-          'Superación miedo al movimiento',
-          'Recuperación funcional'
-        ],
-        recommendedFor: [
-          'Dolor crónico',
-          'Síndrome miofascial',
-          'Fatiga muscular',
-          'Miedo al movimiento'
-        ]
-      },
-      {
-        id: 'suelo-pelvico-postparto',
-        title: 'Suelo pélvico y etapa postparto',
-        icon: 'Baby',
-        description:
-          'Reeducación del control abdominal profundo, respiración, estabilidad y mejora de la postura en el día a día.',
-        longDescription:
-          'Programa específico para la recuperación postparto que trabaja el control abdominal profundo, la respiración y la estabilidad lumbopélvica de forma progresiva y segura.',
-        benefits: [
-          'Reeducación abdominal',
-          'Mejora de la respiración',
-          'Estabilidad lumbopélvica',
-          'Recuperación postural'
-        ],
-        recommendedFor: [
-          'Postparto',
-          'Diástasis abdominal',
-          'Debilidad suelo pélvico',
-          'Recuperación postural'
-        ]
-      },
-      {
-        id: 'hipermovilidad',
-        title: 'Hipermovilidad y falta de estabilidad',
-        icon: 'Target',
-        description:
-          'Refuerzo del control motor y de la musculatura estabilizadora para mejorar seguridad y rendimiento.',
-        longDescription:
-          'Programa enfocado en mejorar el control motor y fortalecer la musculatura estabilizadora en personas con hiperlaxitud o falta de estabilidad articular.',
-        benefits: [
-          'Mejora del control motor',
-          'Fortalecimiento estabilizadores',
-          'Mayor seguridad articular',
-          'Mejora del rendimiento'
-        ],
-        recommendedFor: [
-          'Hiperlaxitud',
-          'Inestabilidad articular',
-          'Falta de control motor',
-          'Prevención de lesiones'
+          'Post-rehabilitación',
+          'Dolores de espalda crónicos',
+          'Corrección de escoliosis/cifosis',
+          'Mejora de la condición física general'
         ]
       }
     ],
@@ -922,9 +759,9 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
           'El pilates terapéutico no es una clase estándar: es un programa guiado y progresivo, supervisado por fisioterapeutas, diseñado para que vuelvas a moverte con calidad. Se adapta a patologías específicas y busca una mejora real de la función.'
       },
       {
-        question: '¿Para qué patologías está indicado?',
+        question: '¿Para quién está indicado?',
         answer:
-          'Está especialmente indicado en dolor de espalda, alteraciones posturales, patologías de hombro y cuello, lesiones de miembro inferior, tendinopatías, rehabilitación postoperatoria, dolor crónico, suelo pélvico postparto e hipermovilidad.'
+          'Está especialmente indicado en post-rehabilitación, personas con dolores de espalda crónicos, corrección de escoliosis o cifosis, y para cualquiera que quiera mejorar su higiene postural, fortalecer el CORE y aumentar su condición física general de forma segura.'
       },
       {
         question: '¿Necesito experiencia previa en pilates?',
@@ -949,10 +786,9 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
     title: 'Ejercicio Terapéutico',
     subtitle: 'Programa de movimiento planificado y personalizado',
     heroDescription:
-      'El ejercicio terapéutico es una parte fundamental de la fisioterapia para mejorar la movilidad, recuperar la fuerza y prevenir lesiones de forma segura. En nuestra clínica, los programas son diseñados y supervisados por fisioterapeutas, adaptándose a las necesidades de cada paciente, independientemente de su edad o condición física. Las sesiones se realizan en grupos reducidos de máximo 4 personas, organizados tras una valoración previa para que los pacientes compartan un nivel similar de edad, condición física y objetivos terapéuticos, garantizando así un trabajo eficaz y personalizado.',
+      'El ejercicio terapéutico es una parte fundamental de la fisioterapia para mejorar la movilidad, recuperar la fuerza y prevenir lesiones de forma segura.',
     icon: 'Activity',
-    image:
-      'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&h=600&fit=crop&q=80',
+    image: '/ejercicio-terapeutico-hero.jpg',
     highlights: [
       { label: 'Supervisión', value: 'Fisioterapeutas' },
       { label: 'Programa', value: 'Personalizado' },
@@ -1128,6 +964,69 @@ export const SERVICES_DETAIL: Record<string, ServiceDetail> = {
         ]
       },
       {
+        id: 'patologia-hombro-cuello',
+        title: 'Patología de hombro y cuello',
+        icon: 'Shield',
+        description:
+          'Tratamiento de tendinopatías del manguito rotador, síndrome subacromial, rigidez, molestias por sobreuso y tensión cervicodorsal.',
+        longDescription:
+          'Abordamos las patologías de hombro y cuello mediante ejercicios que mejoran la movilidad, fortalecen la musculatura estabilizadora y reducen la tensión acumulada en la zona cervicodorsal.',
+        benefits: [
+          'Mejora de la movilidad',
+          'Fortalecimiento estabilizadores',
+          'Reducción de la tensión',
+          'Prevención de lesiones'
+        ],
+        recommendedFor: [
+          'Tendinopatías manguito rotador',
+          'Síndrome subacromial',
+          'Tensión cervicodorsal',
+          'Rigidez de hombro'
+        ]
+      },
+      {
+        id: 'suelo-pelvico-postparto',
+        title: 'Suelo pélvico y etapa postparto',
+        icon: 'Baby',
+        description:
+          'Reeducación del control abdominal profundo, respiración, estabilidad y mejora de la postura en el día a día.',
+        longDescription:
+          'Programa específico para la recuperación postparto que trabaja el control abdominal profundo, la respiración y la estabilidad lumbopélvica de forma progresiva y segura.',
+        benefits: [
+          'Reeducación abdominal',
+          'Mejora de la respiración',
+          'Estabilidad lumbopélvica',
+          'Recuperación postural'
+        ],
+        recommendedFor: [
+          'Postparto',
+          'Diástasis abdominal',
+          'Debilidad suelo pélvico',
+          'Recuperación postural'
+        ]
+      },
+      {
+        id: 'hipermovilidad',
+        title: 'Hipermovilidad y pérdida de equilibrio',
+        icon: 'Target',
+        description:
+          'Refuerzo del control motor y de la musculatura estabilizadora para mejorar seguridad articular y rendimiento.',
+        longDescription:
+          'Programa enfocado en mejorar el control motor, fortalecer la musculatura estabilizadora y dar mayor seguridad articular en personas con hiperlaxitud o falta de control postural.',
+        benefits: [
+          'Mejora del control motor',
+          'Fortalecimiento estabilizadores',
+          'Mayor seguridad articular',
+          'Mejora del rendimiento'
+        ],
+        recommendedFor: [
+          'Hiperlaxitud',
+          'Inestabilidad articular',
+          'Falta de control motor',
+          'Prevención de lesiones'
+        ]
+      },
+      {
         id: 'prevencion-rendimiento',
         title: 'Prevención de lesiones y rendimiento',
         icon: 'Trophy',
@@ -1254,10 +1153,10 @@ export interface FAQ {
 // Equipo profesional
 export const TEAM_MEMBERS = [
   {
-    name: 'Dra. Pilar Gironés Puñet',
+    name: 'Pilar Gironés Puñet',
     role: 'Directora y Podóloga',
     bio: 'Fundadora y directora de la clínica con más de 30 años de experiencia en el sector. Pionera en tratamientos podológicos avanzados y comprometida con la formación continua y la excelencia en el cuidado del paciente.',
-    image: '/images/team/pilar-girones.jpg',
+    image: '/team/pilar-girones.jpg',
     credentials: [
       'Grado en Podología',
       'Directora de Clínica Gironés',
@@ -1267,45 +1166,56 @@ export const TEAM_MEMBERS = [
   {
     name: 'Pilar Cerdá Gironés',
     role: 'Podóloga y Fisioterapeuta',
-    bio: 'Profesional con doble titulación en podología y fisioterapia, ofreciendo una visión integral del paciente. Más de 6 años de experiencia combinando ambas disciplinas para un tratamiento completo y personalizado.',
-    image: '/images/team/pilar-cerda.jpg',
+    bio: 'Profesional con doble titulación en podología y fisioterapia, ofreciendo una visión integral del paciente. Más de 10 años de experiencia combinando ambas disciplinas para un tratamiento completo y personalizado.',
+    image: '/team/pilar-cerda.jpg',
     credentials: [
       'Grado en Podología',
       'Grado en Fisioterapia',
-      'Más de 6 años de experiencia'
+      'Más de 10 años de experiencia'
     ]
   },
   {
-    name: 'Alba Romero Alifa',
-    role: 'Podóloga',
-    bio: 'Podóloga con más de 4 años de experiencia dedicada al cuidado integral del pie. Comprometida con la atención personalizada y el bienestar de cada paciente.',
-    image: '/images/team/alba-romero.jpg',
+    name: 'Alba Romero Alfita',
+    role: 'Podóloga y Fisioterapeuta',
+    bio: 'Profesional con doble titulación en podología y fisioterapia y más de 10 años de experiencia. Comprometida con la atención personalizada y el bienestar integral de cada paciente.',
+    image: '/team/alba-romero.jpg',
     credentials: [
       'Grado en Podología',
-      'Más de 4 años de experiencia'
+      'Grado en Fisioterapia',
+      'Más de 10 años de experiencia'
     ]
   },
   {
     name: 'Elena Díaz Comes',
     role: 'Fisioterapeuta - Suelo Pélvico',
-    bio: 'Fisioterapeuta especializada en suelo pélvico con más de 10 años de experiencia. Experta en el tratamiento de disfunciones del suelo pélvico, rehabilitación postparto y salud íntima femenina y masculina.',
-    image: '/images/team/elena-diaz.jpg',
+    bio: 'Fisioterapeuta especializada en suelo pélvico con casi 10 años de experiencia. Experta en el tratamiento de disfunciones del suelo pélvico, rehabilitación postparto y salud íntima femenina y masculina.',
+    image: '/team/elena-diaz.jpg',
     credentials: [
       'Grado en Fisioterapia',
       'Especialista en Suelo Pélvico',
-      'Más de 10 años de experiencia'
+      'Casi 10 años de experiencia'
     ]
   },
   {
-    name: 'Próximamente',
-    role: 'Nuevo/a especialista',
-    bio: 'Estamos ampliando nuestro equipo para seguir ofreciendo la mejor atención. Pronto contaremos con un nuevo profesional que se sumará a nuestro compromiso con tu salud.',
-    image: '/images/team/placeholder.jpg',
+    name: 'Juan José Salguero',
+    role: 'Fisioterapeuta',
+    bio: 'Experto en el abordaje integral del sistema musculoesquelético. Su metodología combina el diagnóstico de precisión mediante ecografía con las técnicas más punteras en terapia invasiva, garantizando tratamientos eficaces y una recuperación optimizada para cada lesión.',
+    image: null as string | null,
     credentials: [
-      'Información próximamente'
+      'Grado en Fisioterapia',
+      'Ecografía musculoesquelética',
+      'Terapia invasiva'
     ]
   }
 ]
+
+// Equipo de recepción
+export const RECEPTION_TEAM = {
+  name: 'Nuestras recepcionistas',
+  members: 'Maria Luisa Riera y Beatriz Valls',
+  bio: 'Sin ellas todo esto no sería posible. Son el primer contacto con nuestros pacientes y el motor que organiza el día a día de la clínica.',
+  image: '/team/recepcionistas.jpg'
+}
 
 // Valores de la clínica
 export const VALUES = [
@@ -1318,7 +1228,7 @@ export const VALUES = [
   {
     title: 'Cercanía',
     description:
-      'Trato personalizado y cercano. Escuchamos a cada paciente para atender sus necesidades personales.',
+      'Trato personalizado, estudiamos cada caso para ofrecer un tratamiento personalizado.',
     icon: 'Users'
   },
   {
@@ -1471,7 +1381,7 @@ Si tienes dudas sobre el estado de tus plantillas o necesitas una revisión, est
     `,
     image: '/images/blog/plantillas.jpg',
     date: '2025-01-28',
-    author: 'Dra. Pilar Cerdá Gironés',
+    author: 'Pilar Cerdá Gironés',
     category: 'Podología',
     readTime: '5 min'
   },
@@ -1558,7 +1468,7 @@ Si tienes diabetes, una valoración podológica periódica puede ayudarte a mant
     `,
     image: '/images/blog/pie-diabetico.jpg',
     date: '2025-01-21',
-    author: 'Dra. Pilar Cerdá Gironés',
+    author: 'Pilar Cerdá Gironés',
     category: 'Podología',
     readTime: '7 min'
   },
@@ -1696,7 +1606,7 @@ En Clínica Gironés diseñamos programas personalizados de ejercicio terapéuti
     `,
     image: '/images/blog/ejercicio-terapeutico.jpg',
     date: '2025-01-07',
-    author: 'Dra. Pilar Cerdá Gironés',
+    author: 'Pilar Cerdá Gironés',
     category: 'Fisioterapia',
     readTime: '6 min'
   }

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { Calendar, Clock, User, ArrowRight, Tag } from "lucide-react";
 import { Card, SectionTitle } from "@/components/ui";
 import { BLOG_POSTS } from "@/lib/constants";
@@ -81,27 +82,18 @@ export default function BlogPage() {
               <Card hover className="overflow-hidden p-0">
                 <div className="grid md:grid-cols-2 gap-0">
                   {/* Image */}
-                  <div className="aspect-video md:aspect-auto bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center min-h-[300px]">
-                    <div className="text-center p-8">
-                      <div className="w-20 h-20 bg-primary/20 rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                        <svg
-                          className="w-10 h-10 text-primary"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                          />
-                        </svg>
-                      </div>
-                      <span className="text-primary-dark text-sm font-medium">
-                        Artículo destacado
-                      </span>
-                    </div>
+                  <div className="relative aspect-video md:aspect-auto min-h-[300px] overflow-hidden">
+                    <Image
+                      src={featuredPost.image}
+                      alt={featuredPost.title}
+                      fill
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      priority
+                      className="object-cover"
+                    />
+                    <span className="absolute top-4 left-4 inline-flex items-center gap-1 text-xs font-semibold text-white bg-primary/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-soft">
+                      Artículo destacado
+                    </span>
                   </div>
 
                   {/* Content */}
@@ -174,22 +166,14 @@ export default function BlogPage() {
                   <Link href={`/blog/${post.slug}`}>
                     <Card hover className="h-full flex flex-col p-0 overflow-hidden">
                       {/* Image */}
-                      <div className="aspect-video bg-gradient-to-br from-primary-50 to-primary-100 flex items-center justify-center">
-                        <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center">
-                          <svg
-                            className="w-8 h-8 text-primary"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                            />
-                          </svg>
-                        </div>
+                      <div className="relative aspect-video overflow-hidden">
+                        <Image
+                          src={post.image}
+                          alt={post.title}
+                          fill
+                          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
                       </div>
 
                       {/* Content */}

@@ -1,5 +1,13 @@
 import Link from 'next/link'
-import { Phone, Mail, MapPin, Clock, Instagram, ArrowRight } from 'lucide-react'
+import {
+  Phone,
+  Smartphone,
+  Mail,
+  MapPin,
+  Clock,
+  Instagram,
+  ArrowRight
+} from 'lucide-react'
 import { CLINIC_INFO, NAV_LINKS, SERVICES } from '@/lib/constants'
 import { generateWhatsAppLink } from '@/lib/utils'
 import { Logo } from '@/components/ui'
@@ -18,7 +26,7 @@ export function Footer() {
                 ¿Necesitas una consulta?
               </h2>
               <p className='text-primary-100 text-lg'>
-                Estamos aquí para cuidar de la salud de tus pies
+                Estamos aquí para cuidar de ti.
               </p>
             </div>
             <div className='flex flex-col sm:flex-row gap-3'>
@@ -124,6 +132,15 @@ export function Footer() {
                 >
                   <Phone className='w-5 h-5 text-primary mt-0.5 flex-shrink-0' />
                   <span className='text-sm'>{CLINIC_INFO.phone}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${CLINIC_INFO.mobile.replace(/\s/g, '')}`}
+                  className='flex items-start gap-3 text-neutral-400 hover:text-white transition-colors group'
+                >
+                  <Smartphone className='w-5 h-5 text-primary mt-0.5 flex-shrink-0' />
+                  <span className='text-sm'>{CLINIC_INFO.mobile}</span>
                 </a>
               </li>
               <li>

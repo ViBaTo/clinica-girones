@@ -6,14 +6,16 @@ import {
   Users,
   Lightbulb,
   GraduationCap,
-  Heart,
-  Target,
-  Building,
-  Calendar
+  Activity,
+  Flame,
+  Zap,
+  Calendar,
+  Heart
 } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { SectionTitle, Button, Card } from '@/components/ui'
-import { TEAM_MEMBERS, VALUES } from '@/lib/constants'
+import { TEAM_MEMBERS, RECEPTION_TEAM, VALUES } from '@/lib/constants'
 
 const iconMap: Record<string, React.ElementType> = {
   Award,
@@ -41,6 +43,38 @@ const itemVariants = {
       ease: 'easeOut' as const
     }
   }
+}
+
+function TeamAvatar({
+  member
+}: {
+  member: { name: string; image: string | null }
+}) {
+  if (member.image) {
+    return (
+      <div className='relative w-36 h-36 mx-auto mb-5 rounded-full overflow-hidden ring-4 ring-primary-light'>
+        <Image
+          src={member.image}
+          alt={member.name}
+          fill
+          sizes='144px'
+          className='object-cover'
+        />
+      </div>
+    )
+  }
+
+  return (
+    <div className='w-36 h-36 mx-auto mb-5 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center ring-4 ring-primary-light'>
+      <span className='text-4xl font-semibold text-primary'>
+        {member.name
+          .split(' ')
+          .map((n) => n[0])
+          .join('')
+          .slice(0, 2)}
+      </span>
+    </div>
+  )
 }
 
 export default function SobreNosotrosPage() {
@@ -80,19 +114,14 @@ export default function SobreNosotrosPage() {
               transition={{ duration: 0.6 }}
               className='relative'
             >
-              <div className='relative aspect-[4/3] rounded-2xl overflow-hidden'>
-                <div className='absolute inset-0 bg-gradient-to-br from-primary-100 to-primary-200'>
-                  <div className='absolute inset-0 flex items-center justify-center'>
-                    <div className='text-center p-8'>
-                      <div className='w-24 h-24 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center'>
-                        <Building className='w-12 h-12 text-primary' />
-                      </div>
-                      <p className='text-primary-dark font-medium'>
-                        Nuestra clínica
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div className='relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated'>
+                <Image
+                  src='/about-clinica.jpg'
+                  alt='Nuestra clínica - Clínica Gironés'
+                  fill
+                  sizes='(min-width: 1024px) 40rem, 100vw'
+                  className='object-cover'
+                />
               </div>
 
               {/* Stats Cards */}
@@ -130,25 +159,10 @@ export default function SobreNosotrosPage() {
               </h2>
               <div className='space-y-4 text-neutral-600 leading-relaxed'>
                 <p>
-                  Nuestra clínica nació en 1994 con una vocación clara: ofrecer
-                  podología de calidad, con un trato cercano, profesional y
-                  totalmente personalizado.
+                  Nuestra clínica <strong className='font-semibold text-neutral-900'>nació en 1994</strong> con una vocación clara: ofrecer un servicio de podología de calidad basado en un trato cercano, profesional y totalmente personalizado. Bajo la dirección de Pilar Gironés Puñet, el centro ha experimentado una evolución constante, marcada por su trayectoria de más de 15 años como la <strong className='font-semibold text-neutral-900'>podóloga oficial del Valencia CF</strong> del primer equipo, una experiencia que impulsó un enfoque especializado en la podología deportiva y el tratamiento del pie en el ámbito del rendimiento. En 2016, esta trayectoria se reforzó con la incorporación de su hija, Pilar Cerdá Gironés, cuya doble titulación como podóloga y fisioterapeuta permitió expandir los horizontes del negocio hacia la rehabilitación, el tratamiento avanzado de lesiones y la optimización de la técnica de carrera, sin olvidar nunca la importancia de la podología dermatológica, esencial para el cuidado integral de la salud de la piel y las uñas del pie.
                 </p>
                 <p>
-                  Bajo la dirección de la Dra. Pilar Gironés Puñet, hemos ido
-                  creciendo contigo, incorporando nuevos enfoques y
-                  especialidades para dar una atención cada vez más completa.
-                </p>
-                <p>
-                  En 2022 dimos un paso importante ampliando nuestros servicios
-                  e incorporando la fisioterapia. Y a partir de ahora, seguimos
-                  evolucionando para cuidar de tu bienestar de forma integral,
-                  sumando suelo pélvico y pilates a nuestras áreas de atención.
-                </p>
-                <p>
-                  Hoy somos un centro donde la experiencia y la actualización
-                  constante van de la mano, manteniendo siempre lo más
-                  importante: tu salud, tu comodidad y tus resultados.
+                  Este crecimiento nos llevó a dar un paso natural en 2022, ampliando nuestros servicios con la <strong className='font-semibold text-neutral-900'>incorporación de la fisioterapia</strong> y avanzando hacia un abordaje integral de la salud que hoy incluye áreas fundamentales como <strong className='font-semibold text-neutral-900'>el suelo pélvico, el pilates terapeútico, el ejercicio terapéutico y el tratamiento de lesiones.</strong> Actualmente, nos hemos consolidado como un equipo joven y dinámico, en constante formación y con ganas de seguir creciendo para mejorar la calidad de vida de quienes confían en nosotros. Contamos con un equipo reforzado de profesionales podólogos y fisioterapeutas, incluyendo un especialista más en suelo pélvico, un experto en lesiones musculoesqueléticas con dominio de la ecografía y la terapia invasiva, y personal con doble titulación que aporta una visión global y coordinada a cada caso. A pesar de nuestra evolución y de la incorporación de tecnología avanzada, <strong className='font-semibold text-neutral-900'>nuestro objetivo principal permanece intacto: cuidar de ti con un trato humano y honesto</strong>, donde la experiencia y la innovación se unen para obtener los mejores resultados en tu salud y bienestar.
                 </p>
               </div>
 
@@ -192,18 +206,9 @@ export default function SobreNosotrosPage() {
             className='grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-8'
           >
             {TEAM_MEMBERS.slice(0, 3).map((member) => (
-              <motion.div key={member.name} variants={itemVariants}>
-                <Card className='h-full text-center p-8'>
-                  {/* Avatar */}
-                  <div className='w-28 h-28 mx-auto mb-5 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center'>
-                    <span className='text-3xl font-semibold text-primary'>
-                      {member.name
-                        .split(' ')
-                        .map((n) => n[0])
-                        .join('')
-                        .slice(0, 2)}
-                    </span>
-                  </div>
+              <motion.div key={member.name} variants={itemVariants} className='h-full'>
+                <Card className='h-full text-center p-8 flex flex-col'>
+                  <TeamAvatar member={member} />
 
                   <h3 className='text-xl font-semibold text-neutral-900 mb-1'>
                     {member.name}
@@ -213,8 +218,7 @@ export default function SobreNosotrosPage() {
                     {member.bio}
                   </p>
 
-                  {/* Credentials */}
-                  <div className='pt-6 border-t border-neutral-100'>
+                  <div className='mt-auto pt-6 border-t border-neutral-100'>
                     <ul className='space-y-2'>
                       {member.credentials.map((credential, i) => (
                         <li
@@ -238,21 +242,12 @@ export default function SobreNosotrosPage() {
             initial='hidden'
             whileInView='visible'
             viewport={{ once: true }}
-            className='grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto'
+            className='grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto mb-16'
           >
             {TEAM_MEMBERS.slice(3, 5).map((member) => (
-              <motion.div key={member.name} variants={itemVariants}>
-                <Card className='h-full text-center p-8'>
-                  {/* Avatar */}
-                  <div className='w-28 h-28 mx-auto mb-5 rounded-full bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center'>
-                    <span className='text-3xl font-semibold text-primary'>
-                      {member.name
-                        .split(' ')
-                        .map((n) => n[0])
-                        .join('')
-                        .slice(0, 2)}
-                    </span>
-                  </div>
+              <motion.div key={member.name} variants={itemVariants} className='h-full'>
+                <Card className='h-full text-center p-8 flex flex-col'>
+                  <TeamAvatar member={member} />
 
                   <h3 className='text-xl font-semibold text-neutral-900 mb-1'>
                     {member.name}
@@ -262,8 +257,7 @@ export default function SobreNosotrosPage() {
                     {member.bio}
                   </p>
 
-                  {/* Credentials */}
-                  <div className='pt-6 border-t border-neutral-100'>
+                  <div className='mt-auto pt-6 border-t border-neutral-100'>
                     <ul className='space-y-2'>
                       {member.credentials.map((credential, i) => (
                         <li
@@ -279,6 +273,46 @@ export default function SobreNosotrosPage() {
                 </Card>
               </motion.div>
             ))}
+          </motion.div>
+
+          {/* Equipo de recepción */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className='max-w-4xl mx-auto'
+          >
+            <Card className='overflow-hidden p-0'>
+              <div className='grid md:grid-cols-5 gap-0'>
+                <div className='relative md:col-span-2 aspect-square md:aspect-auto md:min-h-[280px]'>
+                  <Image
+                    src={RECEPTION_TEAM.image}
+                    alt={RECEPTION_TEAM.members}
+                    fill
+                    sizes='(max-width: 768px) 100vw, 40vw'
+                    className='object-cover'
+                  />
+                </div>
+                <div className='md:col-span-3 p-8 md:p-10 flex flex-col justify-center'>
+                  <div className='flex items-center gap-2 mb-3'>
+                    <Heart className='w-5 h-5 text-primary' />
+                    <span className='text-primary font-medium text-sm uppercase tracking-wider'>
+                      El corazón de la clínica
+                    </span>
+                  </div>
+                  <h3 className='text-2xl font-semibold text-neutral-900 mb-2'>
+                    {RECEPTION_TEAM.name}
+                  </h3>
+                  <p className='text-primary font-medium mb-4'>
+                    {RECEPTION_TEAM.members}
+                  </p>
+                  <p className='text-neutral-600 leading-relaxed'>
+                    {RECEPTION_TEAM.bio}
+                  </p>
+                </div>
+              </div>
+            </Card>
           </motion.div>
         </div>
       </section>
@@ -339,24 +373,24 @@ export default function SobreNosotrosPage() {
           >
             {[
               {
-                icon: Target,
-                title: 'Plataforma de presiones',
-                desc: 'Análisis biomecánico preciso'
+                icon: Flame,
+                title: 'Indiva',
+                desc: 'Diatermia para regeneración tisular'
               },
               {
-                icon: Heart,
-                title: 'Equipamiento estéril',
-                desc: 'Máxima higiene y seguridad'
+                icon: Zap,
+                title: 'Sistema superinductivo',
+                desc: 'Estimulación magnética profunda'
               },
               {
                 icon: Lightbulb,
-                title: 'Láser podológico',
-                desc: 'Tratamientos avanzados'
+                title: 'Láser',
+                desc: 'Terapia láser de alta potencia'
               },
               {
-                icon: Users,
-                title: 'Sala de espera',
-                desc: 'Ambiente cómodo y acogedor'
+                icon: Activity,
+                title: 'Ecógrafo',
+                desc: 'Diagnóstico ecográfico preciso'
               }
             ].map((item) => (
               <motion.div key={item.title} variants={itemVariants}>

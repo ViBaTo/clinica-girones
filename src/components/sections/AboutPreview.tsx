@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Award, Users, Lightbulb } from 'lucide-react'
 import { Button } from '@/components/ui'
 import { VALUES } from '@/lib/constants'
@@ -25,20 +26,14 @@ export function AboutPreview() {
             transition={{ duration: 0.6 }}
             className='relative'
           >
-            <div className='relative aspect-[4/3] rounded-2xl overflow-hidden'>
-              {/* Placeholder for clinic image */}
-              <div className='absolute inset-0 bg-gradient-to-br from-primary-100 to-primary-200'>
-                <div className='absolute inset-0 flex items-center justify-center'>
-                  <div className='text-center p-8'>
-                    <div className='w-24 h-24 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center'>
-                      <Users className='w-12 h-12 text-primary' />
-                    </div>
-                    <p className='text-primary-dark font-medium'>
-                      Nuestro equipo
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div className='relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated'>
+              <Image
+                src='/about-equipo.jpg'
+                alt='Equipo de la Clínica Gironés'
+                fill
+                sizes='(min-width: 1024px) 40rem, 100vw'
+                className='object-cover'
+              />
             </div>
 
             {/* Experience Badge */}
@@ -68,9 +63,11 @@ export function AboutPreview() {
               Tu salud en las mejores manos
             </h2>
             <p className='text-neutral-600 text-lg leading-relaxed mb-8'>
-              En Clínica Gironés con las técnicas más avanzadas para ofrecer un
-              cuidado integral de tu cuerpo, nuestro equipo de profesionales
-              está comprometido con tu bienestar.
+              En Clínica Gironés cuidamos de los pacientes contando con un
+              equipo de profesionales comprometidos con tu salud y bienestar.
+              Disponemos de la aparatología más innovadora para ofrecer
+              tratamientos más breves, precisos y orientados a la rápida mejora
+              de los síntomas.
             </p>
 
             {/* Values */}

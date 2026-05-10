@@ -331,47 +331,6 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className='section-padding bg-neutral-50'>
-        <div className='container-custom'>
-          <div className='max-w-3xl mx-auto text-center mb-12'>
-            <h2 className='text-3xl font-semibold text-neutral-900 mb-4'>
-              Preguntas frecuentes
-            </h2>
-            <p className='text-neutral-600'>
-              Resolvemos tus dudas más comunes.
-            </p>
-          </div>
-
-          <div className='max-w-3xl mx-auto space-y-4'>
-            {[
-              {
-                q: '¿Necesito cita previa?',
-                a: 'Sí, trabajamos con cita previa para poder ofrecerte la atención que mereces. Puedes pedir cita por teléfono, WhatsApp o a través del formulario.'
-              },
-              {
-                q: '¿Qué formas de pago aceptáis?',
-                a: 'Aceptamos pago en efectivo, tarjeta de crédito/débito y Bizum.'
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className='p-6'>
-                  <h3 className='font-semibold text-neutral-900 mb-2'>
-                    {faq.q}
-                  </h3>
-                  <p className='text-neutral-600'>{faq.a}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   )
 }

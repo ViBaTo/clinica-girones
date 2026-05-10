@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Phone, MessageCircle, ArrowDown } from 'lucide-react'
+import Image from 'next/image'
 import { Button } from '@/components/ui'
 import { CLINIC_INFO } from '@/lib/constants'
 import { generatePhoneLink } from '@/lib/utils'
@@ -121,33 +122,15 @@ export function Hero() {
             className='relative hidden lg:block'
           >
             <div className='relative aspect-square max-w-lg mx-auto'>
-              {/* Placeholder for actual clinic image */}
-              <div className='absolute inset-0 bg-gradient-to-br from-primary-100 to-primary-200 rounded-3xl overflow-hidden'>
-                <div className='absolute inset-0 flex items-center justify-center'>
-                  <div className='text-center p-8'>
-                    <div className='w-32 h-32 bg-primary/20 rounded-full mx-auto mb-6 flex items-center justify-center'>
-                      <svg
-                        className='w-16 h-16 text-primary'
-                        fill='none'
-                        stroke='currentColor'
-                        viewBox='0 0 24 24'
-                      >
-                        <path
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          strokeWidth={1.5}
-                          d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
-                        />
-                      </svg>
-                    </div>
-                    <p className='text-primary-dark font-medium text-lg'>
-                      Cuidado profesional
-                    </p>
-                    <p className='text-primary-600 text-sm mt-1'>
-                      para tus pies
-                    </p>
-                  </div>
-                </div>
+              <div className='absolute inset-0 rounded-3xl overflow-hidden shadow-elevated'>
+                <Image
+                  src='/hero-home.jpg'
+                  alt='Clínica Gironés - cuidado profesional de la salud'
+                  fill
+                  priority
+                  sizes='(min-width: 1024px) 32rem, 100vw'
+                  className='object-cover'
+                />
               </div>
 
               {/* Floating Cards */}

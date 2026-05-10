@@ -35,3 +35,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw assets / source material (not served by the web)
+/src/public/
+*.bak
+

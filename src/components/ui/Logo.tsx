@@ -4,30 +4,27 @@ import { cn } from '@/lib/utils'
 interface LogoProps {
   className?: string
   size?: 'sm' | 'md' | 'lg'
+  /** 'default' uses the brand color (#272B00); 'white' is for dark backgrounds. */
   variant?: 'default' | 'white'
 }
 
-export function Logo({
-  className,
-  size = 'md',
-  variant = 'default'
-}: LogoProps) {
+export function Logo({ className, size = 'md', variant = 'default' }: LogoProps) {
   const sizes = {
-    sm: { height: 64, width: 90 },
-    md: { height: 88, width: 124 },
-    lg: { height: 112, width: 158 }
+    sm: { height: 28, width: 197 },
+    md: { height: 40, width: 282 },
+    lg: { height: 56, width: 395 }
   }
 
   const sizeClasses = {
-    sm: 'h-16',
-    md: 'h-[88px]',
-    lg: 'h-28'
+    sm: 'h-7',
+    md: 'h-10',
+    lg: 'h-14'
   }
 
   const logoSrc =
     variant === 'white'
-      ? '/clinica-girones-logo-white.svg'
-      : '/clinica-girones-logo.svg'
+      ? '/logo-clinica-girones-white.svg'
+      : '/logo-clinica-girones.svg'
 
   return (
     <Image
