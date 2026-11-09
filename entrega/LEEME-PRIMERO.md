@@ -32,7 +32,7 @@ Esta carpeta es tu guía para quedarte la web y gestionarla tú. No necesitas sa
 ## Los 7 pasos
 
 1. **Preparar el ordenador** — instalar lo necesario. *(15 min)*
-2. **Quedarte el código** — aceptar el repositorio en tu GitHub y descargarlo. *(10 min)*
+2. **Quedarte el código** — hacer tu copia (Fork) en tu GitHub y descargarla. *(10 min)*
 3. **Publicar la web** en tu Vercel. *(10 min)*
 4. **Conectar el dominio** `clinicagirones.es` a tu Vercel. *(15 min + esperar a que propague)*
 5. **Arreglar el formulario de contacto** para que los mensajes lleguen al correo. *(20 min)*

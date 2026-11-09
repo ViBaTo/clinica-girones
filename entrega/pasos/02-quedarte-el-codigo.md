@@ -3,16 +3,16 @@
 **Objetivo:** que el repositorio (la carpeta del código en GitHub) sea **tuyo**, y tenerlo descargado y funcionando en tu ordenador.
 **Tiempo:** 10 minutos.
 
-## Cómo funciona el traspaso
+## Cómo te quedas tu copia (Fork)
 
-Vicente usa la función **«Transfer ownership»** de GitHub: el repositorio pasa entero (con todo su historial) de su cuenta a la tuya. Para eso:
+El código está en abierto en https://github.com/ViBaTo/clinica-girones. Te haces **tu propia copia** en tu cuenta con el botón *Fork*:
 
-1. **Tú:** crea tu cuenta en https://github.com/signup si no la tienes y **pásale a Vicente tu nombre de usuario de GitHub**.
-2. **Vicente:** en `github.com/ViBaTo/clinica-girones` → *Settings* → abajo del todo, *Danger Zone* → **Transfer ownership** → escribe tu usuario → confirma.
-3. **Tú:** te llega un correo de GitHub. Pulsa el enlace para **aceptar** el repositorio. Ya aparece en `github.com/TU-USUARIO/clinica-girones`.
-4. **Tú (recomendado):** en tu repositorio → *Settings* → *General* → *Danger Zone* → **Change visibility** → **Private**. Así el código solo lo ves tú.
+1. Crea tu cuenta en https://github.com/signup si no la tienes, y entra.
+2. Abre https://github.com/ViBaTo/clinica-girones
+3. Arriba a la derecha, pulsa **Fork** → **Create fork**.
+4. Listo: ya tienes `github.com/TU-USUARIO/clinica-girones`. **A partir de ahora trabajas siempre sobre TU copia**, nunca sobre la de Vicente.
 
-> **Ojo:** mientras no termine el paso 6, la web que está en internet sigue saliendo del Railway de Vicente. El traspaso del repositorio **no** apaga la web; no hay prisa.
+> **Ojo:** mientras no termine el paso 6, la web que está en internet sigue saliendo del Railway de Vicente. Hacer el fork **no** apaga la web; no hay prisa.
 
 ## Descargarlo en tu ordenador
 

@@ -5,7 +5,7 @@
 ## Pasos
 
 - [ ] **1. Preparar el ordenador** — git, Node.js 22, pnpm y Claude Code instalados → `pasos/01-preparar-el-ordenador.md`
-- [ ] **2. Quedarte el código** — repositorio en tu GitHub, descargado y compilando en local → `pasos/02-quedarte-el-codigo.md`
+- [ ] **2. Quedarte el código** — tu copia (Fork) en tu GitHub, descargada y compilando en local → `pasos/02-quedarte-el-codigo.md`
 - [ ] **3. Publicar la web** — desplegada en tu Vercel (o Railway) con URL provisional funcionando → `pasos/03-publicar-en-vercel-o-railway.md`
 - [ ] **4. Conectar el dominio** — `clinicagirones.es` y `www` apuntan a tu despliegue, con candado (HTTPS), y el correo sigue funcionando → `pasos/04-conectar-el-dominio.md`
 - [ ] **5. Formulario de contacto** — los mensajes de `/contacto` llegan de verdad al correo → `pasos/05-formulario-de-contacto.md`
